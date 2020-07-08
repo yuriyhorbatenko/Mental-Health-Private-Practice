@@ -5,7 +5,14 @@ const app = express();
 
 connectDB();
 
+//init middleware
+app.use(express.json({ exteneded: false }));
+
 app.get('/', (req, res) => res.send('API Running'));
+
+//Define Routes
+app.use('/api/users', require('./routes/api/users'));
+app.use('/api/example', require('./routes/api/example'));
 
 const PORT = process.env.PORT || 5000;
 
