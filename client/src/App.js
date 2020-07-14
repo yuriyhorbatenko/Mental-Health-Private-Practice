@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Body from "./components/Body";
 import Footer from "./components/Footer";
+import Header from "./components/Header";
+import Menu from "./components/Menu";
 
 import About from "./pages/About";
 import Services from "./pages/Services";
@@ -12,12 +14,16 @@ import Links from "./pages/Links";
 
 class App extends Component {
 
+
+
   render() {
     return (
 
       <Router>
         <>
           <Navbar />
+          <Header />
+          <Menu />
 
           <Body>
             {/* <Route exact path="/" component={Search} /> */}
