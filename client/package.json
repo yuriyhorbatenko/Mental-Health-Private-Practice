@@ -2,9 +2,7 @@
   "name": "Project-3",
   "version": "0.1.0",
   "private": true,
-  "engines": {
-    "node": "12.x"
-  },
+  "proxy": "http://localhost:3001/",
   "dependencies": {
     "axios": "^0.18.0",
     "bootstrap": "^4.5.0",
