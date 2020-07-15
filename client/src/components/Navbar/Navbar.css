@@ -1,21 +1,56 @@
-.navbar {
+ .navbar {
     box-shadow: 0px 5px 15px -2px rgba(0, 0, 0, 0.575);
     font-size: 15px;
     letter-spacing: 1px;
     border-bottom: 1px solid rgb(209, 208, 208);
     background-color: rgb(52,58,64);
-    height: 40px;
 }
 
-.name-link, .login-link {
+.menu ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-right: 20px;
+    padding-right: 50px;
+}
+
+.menu ul li {
+    margin: 0 20px;
+    padding: 10px;
+}
+
+.menu ul li a {
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.login {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.name-link {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.name-link:hover {
     text-decoration: none;
     color: white;
     text-transform: uppercase;
 }
 
-.name-link:hover, .login-link:hover {
-    text-decoration: none;
-    color: white;
-    text-transform: uppercase;
+.btn-outline-dark {
+    margin-left: 10px;
 }
-
