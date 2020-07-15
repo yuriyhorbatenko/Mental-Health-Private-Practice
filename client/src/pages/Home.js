@@ -1,16 +1,14 @@
 import React, { Component } from "react";
 import Fade from 'react-reveal/Fade';
 
-class Links extends Component {
+class Home extends Component {
 
     render() {
         return (
             <>
                 <Fade>
-                    <div id="LinksBody"></div>
-                    <div id="Divider"></div>
-                    <div className="Links">
-                        <h1>Helpful Links</h1>
+                    <div id="HomeBody">
+                        <div id="Home-Text">Some cool text will be here</div>
                     </div>
                 </Fade>
             </>
@@ -18,4 +16,4 @@ class Links extends Component {
     }
 }
 
-export default Links;
+export default Home;
