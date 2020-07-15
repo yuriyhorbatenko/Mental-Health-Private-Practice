@@ -10,7 +10,8 @@
     "client": "cd client && npm run start",
     "install": "cd client && npm install",
     "build": "cd client && npm run build",
-    "heroku-postbuild": "npm run build"
+    "heroku-postbuild": "npm run build",
+    "ree": "rm -rf node_modules/ && cd client && rm -rf node_modules/"
   },
   "author": "",
   "license": "ISC",
