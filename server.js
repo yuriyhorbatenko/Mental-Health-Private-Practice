@@ -11,9 +11,9 @@ connectDB();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json({ exteneded: false }));
 
-// if (process.env.NODE_ENV === 'production') {
-//   app.use(express.static('client/build'));
-// }
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static('client/build'));
+}
 
 // app.get('/', (req, res) => res.send('API Running'));
 
