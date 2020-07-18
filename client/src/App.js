@@ -10,12 +10,16 @@ import About from "./pages/About";
 import Services from "./pages/Services";
 import Appointment from "./pages/Appointment";
 import Links from "./pages/Links";
+import Register from "./pages/Register";
+
 
 
 class App extends Component {
 
+
   render() {
     return (
+
 
       <Router>
         <>
@@ -27,6 +31,7 @@ class App extends Component {
             <Route exact path="/services" component={Services} />
             <Route exact path="/appointment" component={Appointment} />
             <Route exact path="/links" component={Links} />
+            <Route exact path="/register" component={Register} />
           </Body>
 
           <Footer />
