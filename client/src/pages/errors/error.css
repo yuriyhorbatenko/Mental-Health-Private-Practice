@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+*
+{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body
+{
+    background: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.7));
+    height: 100vh;
+
+}
+
+#container
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #151729;
+    background: url('https://cdn.wallpaperhub.app/cloudcache/e/a/5/c/c/1/ea5cc12f33fa72e18525abe1aa08f22ba9ed73dd.jpg');
+    box-shadow: 0 15px 30px rgba(0,0,0,.5);
+}
+
+
+#container .content
+{
+    max-width: 600px;
+    text-align: center;
+}
+#container .content h2
+{
+    font-size: 18vw;
+    color: #fff;
+    line-height: 1em;
+}
+#container .content h4
+{
+    position: relative;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #fff;
+    font-weight: 300;
+    padding: 10px 20px;
+    display: inline-block;
+}
+
+#container .content p
+{
+    color: #fff;
+    font-size: 1.2em;
+}
+
+#container .content a
+{
+    position: relative;
+    display: inline-block;
+    padding: 10px 25px;
+    background: #ff0562;
+    color: #fff;
+    text-decoration: none;
+    margin-top: 25px;
+    border-radius: 25px;
+    border-bottom: 4px solid #d00d56;
+}
+
+
+
+#containerb
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #151729;
+    background: url('https://newevolutiondesigns.com/images/freebies/galaxy-wallpaper-36.jpg');
+    box-shadow: 0 15px 30px rgba(0,0,0,.5);
+}
+
+#containerb .content
+{
+    max-width: 600px;
+    text-align: center;
+}
+#containerb .content h2
+{
+    font-size: 18vw;
+    color: #fff;
+    line-height: 1em;
+}
+#containerb .content h4
+{
+    position: relative;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #fff;
+    font-weight: 300;
+    padding: 10px 20px;
+    display: inline-block;
+}
+
+#containerb .content p
+{
+    color: #fff;
+    font-size: 1.2em;
+}
+
+#containerb .content a
+{
+    position: relative;
+    display: inline-block;
+    padding: 10px 25px;
+    background: #ff0562;
+    color: #fff;
+    text-decoration: none;
+    margin-top: 25px;
+    border-radius: 25px;
+    border-bottom: 4px solid #d00d56;
+}
+
+
+
+
+
+
+#containerc
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #151729;
+    background: url('https://cdnb.artstation.com/p/assets/images/images/011/724/237/4k/evan-cwiertny-evancwiertny-spaceshipcrashfinal.jpg?1531082075');
+    box-shadow: 0 15px 30px rgba(0,0,0,.5);
+}
+
+#containerc .content
+{
+    max-width: 600px;
+    text-align: center;
+}
+#containerc .content h2
+{
+    font-size: 18vw;
+    color: #151729;
+    line-height: 1em;
+}
+#containerc .content h4
+{
+    position: relative;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #151729;
+    font-weight: 500;
+    padding: 10px 20px;
+    display: inline-block;
+}
+
+#containerc .content p
+{
+    color: #151729;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+#containerc .content a
+{
+    position: relative;
+    display: inline-block;
+    padding: 10px 25px;
+    background: #ff0562;
+    color: #151729;
+    text-decoration: none;
+    margin-top: 25px;
+    border-radius: 25px;
+    border-bottom: 4px solid #d00d56;
+    font-weight: 500;
+}
