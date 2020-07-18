@@ -4,7 +4,8 @@ const router = require('express').Router();
 //Define Routes
 router.use('/users', require('./users'));
 router.use('/auth', require('./auth'));
-router.use('/example', require('./example'));
+router.use('/profile', require('./profile'));
+router.use('/profile', require('./bookings'));
 
 // For anything else, render the html page
 router.use(function (req, res) {
