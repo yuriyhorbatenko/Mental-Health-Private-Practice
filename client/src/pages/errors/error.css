@@ -1,18 +1,12 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+/* @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
 *
 {
     margin: 0;
     padding:0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-}
+} */
 
-body
-{
-    background: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.7));
-    height: 100vh;
-
-}
 
 #container
 {
@@ -124,10 +118,6 @@ body
     border-radius: 25px;
     border-bottom: 4px solid #d00d56;
 }
-
-
-
-
 
 
 #containerc

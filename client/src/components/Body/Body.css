@@ -45,13 +45,19 @@ h1 {
     background-image: url(../../img/img4.jpg);
 }
 
+#RegisterBody {
+    background-image: url(../../img/img5.jpg);
+    height: 93vh;
+    padding-top: 100px;
+}
+
 .RegisterForm {
     width: 900px;
     margin: 0 auto 0 auto;
-    margin-top: 100px;
     padding: 30px;
     border-radius: 20px;
     box-shadow: 0px 5px 15px -2px rgba(0, 0, 0, 0.575);
+    background-color: white;
 }
 
 .form-control:focus {
@@ -61,4 +67,10 @@ h1 {
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.719);
 }
+
+#error-text {
+    color: red!important;;
+}
+
+
 
