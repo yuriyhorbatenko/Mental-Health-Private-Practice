@@ -51,6 +51,12 @@
     text-transform: uppercase;
 }
 
-.btn-outline-dark {
+.btn-outline-danger {
+    float: right;
+}
+
+.btn-success {
     margin-left: 10px;
 }
+
+

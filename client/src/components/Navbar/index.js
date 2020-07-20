@@ -1,4 +1,3 @@
-import { BrowserRouter as Link } from 'react-router-dom';
 import React from 'react';
 import './Navbar.css';
 import Modal from 'react-bootstrap/Modal';
@@ -72,13 +71,21 @@ function Navbar() {
               <Form.Control type='password' placeholder='Password' />
             </Form.Group>
 
+            <hr></hr>
+
             <Button variant='dark' type='submit'>
               Submit
             </Button>
 
-            <Button variant='outline-dark' onClick={hideModal}>
+            <Button variant='success' href="/register">
+              Register
+            </Button>
+
+            <Button variant='outline-danger' onClick={hideModal}>
               Cancel
             </Button>
+
+
           </Form>
         </Modal.Body>
       </Modal>
