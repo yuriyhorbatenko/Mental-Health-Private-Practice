@@ -1,4 +1,3 @@
-import { BrowserRouter as Link } from 'react-router-dom';
 import React from 'react';
 import './Navbar.css';
 import Modal from 'react-bootstrap/Modal';
