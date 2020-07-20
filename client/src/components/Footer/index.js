@@ -14,7 +14,6 @@ function Footer() {
                 <div className="year2020">2020</div>
             </div>
         </>
-
     );
 }
 
