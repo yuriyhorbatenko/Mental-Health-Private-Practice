@@ -8,6 +8,7 @@ const Event = require('./models/event');
 
 const graphQlSchema = require('./graphql/schema/index');
 const graphQlResolvers = require('./graphql/resolvers/index');
+const isAuth = require('./middleware/is-auth');
 
 // const routes = require("./routes");
 const app = express();
@@ -17,6 +18,7 @@ connectDB();
 //init middleware
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json({ exteneded: false }));
+// app.use(isAuth);
 // app.use(
 //     '/graphql',
 //     graphqlHttp({
