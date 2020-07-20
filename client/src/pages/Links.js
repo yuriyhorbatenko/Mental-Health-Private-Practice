@@ -13,6 +13,7 @@ class Links extends Component {
                         <h1>Helpful Links</h1>
 
                         <h3 className="topic-links">
+
                             Mental Health Delegates: 215-685-6440;<br></br>
                             Suicide and Crisis Intervention Hotline: 215-686-4420<br></br>
                             National Suicide Prevention Lifeline: 1-800-273-TALK<br></br>
