@@ -67,11 +67,9 @@ class Register extends Component {
             errors.passwordError2 = "Password didn't match";
         }
 
-        // else {
-        //     api.saveUser()
-        //         .then(savedBooks => this.setState({ savedBooks: savedBooks }))
-        //         .catch(err => console.error(err));
-        // }
+        else{
+            console.log("valid")
+        }
 
         this.setState({
             ...this.state,
@@ -103,7 +101,7 @@ class Register extends Component {
             <div id="RegisterBody">
                 <div className="RegisterForm">
                     <Fade>
-                        <Form>
+                        <Form method="POST" action="api/users">
                             <Form.Group controlId="FirstName">
                                 <Form.Label>First Name</Form.Label>
                                 <Form.Control

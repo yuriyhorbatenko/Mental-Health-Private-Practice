@@ -1,10 +1,11 @@
 const express = require('express');
 const connectDB = require('./config/db');
 const routes = require('./routes');
-const graphqlHttp = require('express-graphql');
-const { buildSchema } = require('graphql');
+// const graphqlHttp = require('express-graphql');
+// const { buildSchema } = require('graphql');
 
 const Event = require('./models/event');
+
 
 const graphQlSchema = require('./graphql/schema/index');
 const graphQlResolvers = require('./graphql/resolvers/index');
