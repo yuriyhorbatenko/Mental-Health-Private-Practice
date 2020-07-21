@@ -6,7 +6,6 @@ import Alert from '../layout/Alert';
 import Dashboard from '../dashboard/Dashboard';
 import ProfileForm from '../profile-forms/ProfileForm';
 import Profile from '../profile/Profile';
-import NotFound from '../layout/NotFound';
 import PrivateRoute from '../routing/PrivateRoute';
 //import Home from './components/pages/Home';
 import About from '../pages/About';
@@ -32,16 +31,14 @@ const Routes = (props) => {
         <Route exact path='/services' component={Services} />
         <Route exact path='/appointment' component={Appointment} />
         <Route exact path='/links' component={Links} />
-        <Route exact path='/register' component={Register} />
         <Route exact path='/err500' component={Err500} />
-        <Route exact path='/err404' component={Err404} />
         <Route exact path='/err401' component={Err401} />
         <PrivateRoute exact path='/dashboard' component={Dashboard} />
         <PrivateRoute exact path='/create-profile' component={ProfileForm} />
         <PrivateRoute exact path='/edit-profile' component={ProfileForm} />
         {/* <PrivateRoute exact path='/bookings' component={Bookings} />
         <PrivateRoute exact path='/bookings/:id' component={Booking} /> */}
-        <Route component={NotFound} />
+        <Route component={Err404} />
       </Switch>
     </section>
   );
