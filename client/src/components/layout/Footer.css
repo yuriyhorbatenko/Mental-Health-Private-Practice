@@ -1,7 +1,5 @@
 .footer {
-    display: flex;
-    justify-content: center;
-    font-size: 12px;
+    font-size: 15px;
     text-align: center;
     position: fixed;
     left: 0;
@@ -15,7 +13,7 @@
 }
     
 .github {
-    padding: 4px;
+    padding: 3px;
     width: 33px;
 }
 
