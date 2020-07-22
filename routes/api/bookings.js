@@ -3,8 +3,8 @@ const router = express.Router();
 const { check, validationResult } = require('express-validator');
 const auth = require('../../middleware/auth');
 
-const Booking = require('../../models/booking');
-const User = require('../../models/user');
+const Booking = require('../../models/Booking');
+const User = require('../../models/User');
 const checkObjectId = require('../../middleware/checkObjectId');
 
 // @route    POST api/booking
