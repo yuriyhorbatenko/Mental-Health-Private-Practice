@@ -4,7 +4,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### Every Small Business Needs Help
 
-We created this app in 
 
 ### `npm test`
 
