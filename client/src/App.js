@@ -11,6 +11,7 @@ import store from './store';
 import { loadUser } from './actions/auth';
 import setAuthToken from './utils/setAuthToken';
 import { body } from 'express-validator';
+import Body from './components/Body/index';
 
 const App = () => {
   useEffect(() => {
@@ -19,18 +20,20 @@ const App = () => {
   }, []);
 
   return (
-    <Provider store={store}>
-      <Router>
-        <Fragment>
-          <Navbar />
-          <Switch>
-            <Route exact path='/' component={Landing} />
-            <Route component={Routes} />
-          </Switch>
-          <Footer />
-        </Fragment>
-      </Router>
-    </Provider>
+    <Body>
+      <Provider store={store}>
+        <Router>
+          <Fragment>
+            <Navbar />
+            <Switch>
+              <Route exact path='/' component={Landing} />
+              <Route component={Routes} />
+            </Switch>
+            <Footer />
+          </Fragment>
+        </Router>
+      </Provider>
+    </Body>
   );
 };
 
