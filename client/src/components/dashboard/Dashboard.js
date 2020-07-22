@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import DashboardActions from './DashboardActions';
-import Body from '../Body/index';
 import { getCurrentProfile, deleteAccount } from '../../actions/profile';
 
 const Dashboard = ({
@@ -17,7 +16,6 @@ const Dashboard = ({
   }, [getCurrentProfile]);
 
   return (
-    <Body>
     <Fragment>
       <h1 className='large text-primary'>Dashboard</h1>
       <p className='lead'>
@@ -41,7 +39,6 @@ const Dashboard = ({
         </Fragment>
       )}
     </Fragment>
-    </Body>
   );
 };
 

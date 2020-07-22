@@ -1,17 +1,7 @@
 const express = require('express');
 const connectDB = require('./config/db');
 const routes = require('./routes');
-//const { graphqlHttp } = require('express-graphql');
-//const { buildSchema } = require('graphql');
 
-const Event = require('./models/event');
-
-
-//const graphQlSchema = require('./graphql/schema/index');
-//const graphQlResolvers = require('./graphql/resolvers/index');
-//const isAuth = require('./middleware/is-auth');
-
-// const routes = require("./routes");
 const app = express();
 
 connectDB();
@@ -19,15 +9,6 @@ connectDB();
 //init middleware
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json({ exteneded: false }));
- //app.use(isAuth);
- //app.use(
-   //  '/graphql',
-   //  graphqlHttp({
-     //  schema: graphQlSchema,
-    //   rootValue: graphQlResolvers,
-    //   graphiql: true
-  //  })
-  // );
 
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static('client/build'));
