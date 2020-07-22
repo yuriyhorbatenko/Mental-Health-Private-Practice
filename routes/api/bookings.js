@@ -24,6 +24,8 @@ router.post(
 
       const newBooking = new Booking({
         text: req.body.text,
+        name: user.name,
+        avatar: user.avatar,
         user: req.user.id,
       });
 
@@ -37,7 +39,7 @@ router.post(
   }
 );
 
-// @route    GET api/bookings
+// @route    GET api/booking
 // @desc     Get all bookings
 // @access   Private
 router.get('/', auth, async (req, res) => {
