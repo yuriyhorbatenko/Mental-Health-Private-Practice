@@ -52,7 +52,7 @@
 }
 
 .btn-outline-danger {
-    float: right;
+    float: right!important;
 }
 
 .btn-success {
