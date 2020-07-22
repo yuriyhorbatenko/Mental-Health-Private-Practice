@@ -1,8 +1,9 @@
 import React from 'react';
-import { Link, Redirect } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Fade from 'react-reveal/Fade';
+import Zoom from 'react-reveal/Zoom';
 
 const Landing = ({ isAuthenticated }) => {
   if (isAuthenticated) {
@@ -12,19 +13,10 @@ const Landing = ({ isAuthenticated }) => {
   return (
     <>
       <Fade>
-        <div id='HomeBody'>
-          <div id='Home-Text'>Some cool text will be here</div>
+        <div id="HomeBody">
+          <div id="Home-Text"><Zoom cascade>"Believe you can and you're halfway there."</Zoom><span id="Home-Text2"><Zoom cascade>    Theodore Roosevelt</Zoom></span></div>
         </div>
       </Fade>
-
-      <div className='buttons'>
-        <Link to='/register' className='btn btn-primary'>
-          Sign Up
-        </Link>
-        <Link to='/login' className='btn btn-light'>
-          Login
-        </Link>
-      </div>
     </>
   );
 };
