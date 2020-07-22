@@ -22,12 +22,6 @@ const userSchema = new Schema({
     type: Date,
     default: Date.now,
   },
-  createdEvents: [
-    {
-      type: Schema.Types.ObjectId,
-      ref: 'Event',
-    },
-  ],
 });
 
 const User = mongoose.model('User', userSchema);
