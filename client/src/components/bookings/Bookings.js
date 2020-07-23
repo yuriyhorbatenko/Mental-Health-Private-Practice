@@ -13,9 +13,6 @@ const Bookings = ({ getBookings, booking: { bookings } }) => {
   return (
     <Fragment>
       <h1 className='large text-primary'>Bookings</h1>
-      <p className='lead'>
-        <i className='fas fa-user' /> Welcome to the community
-      </p>
       <BookingForm />
       <div className='bookings'>
         {bookings.map((booking) => (

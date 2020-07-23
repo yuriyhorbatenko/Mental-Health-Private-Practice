@@ -2,18 +2,17 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { addLike, removeLike, deleteBooking } from '../../actions/booking';
+import { deleteBooking } from '../../actions/booking';
 
 const BookingItem = ({
   deleteBooking,
   auth,
-  booking: { _id, text, name, avatar, user, likes, comments, date },
+  booking: { _id, text, name, user },
   showActions,
 }) => (
   <div className='booking bg-white p-1 my-1'>
     <div>
       <Link to={`/profile/${user}`}>
-        <img className='round-img' src={avatar} alt='' />
         <h4>{name}</h4>
       </Link>
     </div>
@@ -44,7 +43,7 @@ BookingItem.defaultProps = {
 BookingItem.propTypes = {
   booking: PropTypes.object.isRequired,
   auth: PropTypes.object.isRequired,
-  deletePost: PropTypes.func.isRequired,
+  deleteBooking: PropTypes.func.isRequired,
   showActions: PropTypes.bool,
 };
 
@@ -52,4 +51,4 @@ const mapStateToProps = (state) => ({
   auth: state.auth,
 });
 
-export default connect(mapStateToProps, { deletePost })(BookingItem);
+export default connect(mapStateToProps, { deleteBooking })(BookingItem);
