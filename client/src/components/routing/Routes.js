@@ -7,11 +7,12 @@ import Dashboard from '../dashboard/Dashboard';
 import ProfileForm from '../profile-forms/ProfileForm';
 import Profile from '../profile/Profile';
 import PrivateRoute from '../routing/PrivateRoute';
-//import Home from './components/pages/Home';
 import About from '../pages/About';
 import Services from '../pages/Services';
 import Appointment from '../pages/Appointment';
 import Links from '../pages/Links';
+import Bookings from '../bookings/Bookings';
+import Booking from '../booking/Booking';
 //import Register from './pages/Register';
 import Err404 from '../pages/errors/404/404';
 import Err500 from '../pages/errors/500/500';
@@ -36,8 +37,8 @@ const Routes = (props) => {
         <PrivateRoute exact path='/dashboard' component={Dashboard} />
         <PrivateRoute exact path='/create-profile' component={ProfileForm} />
         <PrivateRoute exact path='/edit-profile' component={ProfileForm} />
-        {/* <PrivateRoute exact path='/bookings' component={Bookings} />
-        <PrivateRoute exact path='/bookings/:id' component={Booking} /> */}
+        <PrivateRoute exact path='/bookings' component={Bookings} />
+        <PrivateRoute exact path='/bookings/:id' component={Booking} />
         <Route component={Err404} />
       </Switch>
     </>

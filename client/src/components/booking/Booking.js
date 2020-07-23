@@ -3,33 +3,33 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import Spinner from '../layout/Spinner';
-import PostItem from '../bookings/BookingItem';
-import { getPost } from '../../actions/booking';
+import BookingItem from '../bookings/BookingItem';
+import { getBooking } from '../../actions/booking';
 
-const Post = ({ getPost, post: { post, loading }, match }) => {
+const Booking = ({ getBooking, booking: { booking, loading }, match }) => {
   useEffect(() => {
-    getPost(match.params.id);
-  }, [getPost, match.params.id]);
+    getBooking(match.params.id);
+  }, [getBooking, match.params.id]);
 
-  return loading || post === null ? (
+  return loading || booking === null ? (
     <Spinner />
   ) : (
     <Fragment>
-      <Link to='/posts' className='btn'>
-        Back To Posts
+      <Link to='/bookings' className='btn'>
+        Back To Bookings
       </Link>
-      <PostItem post={post} showActions={false} />
+      <BookingItem booking={booking} showActions={false} />
     </Fragment>
   );
 };
 
-Post.propTypes = {
-  getPost: PropTypes.func.isRequired,
-  post: PropTypes.object.isRequired,
+Booking.propTypes = {
+  getBooking: PropTypes.func.isRequired,
+  booking: PropTypes.object.isRequired,
 };
 
 const mapStateToProps = (state) => ({
-  post: state.post,
+  booking: state.booking,
 });
 
-export default connect(mapStateToProps, { getPost })(Post);
+export default connect(mapStateToProps, { getBooking })(Booking);
