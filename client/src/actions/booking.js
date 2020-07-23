@@ -1,80 +1,80 @@
 import api from '../utils/api';
 import { setAlert } from './alert';
 import {
-  GET_POSTS,
-  POST_ERROR,
-  DELETE_POST,
-  ADD_POST,
-  GET_POST,
+  GET_BOOKINGS,
+  BOOKING_ERROR,
+  DELETE_BOOKING,
+  ADD_BOOKING,
+  GET_BOOKING,
 } from './types';
 
 // Get bookings
-export const getPosts = () => async (dispatch) => {
+export const getBookings = () => async (dispatch) => {
   try {
     const res = await api.get('/bookings');
 
     dispatch({
-      type: GET_POSTS,
+      type: GET_BOOKINGS,
       payload: res.data,
     });
   } catch (err) {
     dispatch({
-      type: POST_ERROR,
+      type: BOOKING_ERROR,
       payload: { msg: err.response.statusText, status: err.response.status },
     });
   }
 };
 
 // Delete booking
-export const deletePost = (id) => async (dispatch) => {
+export const deleteBooking = (id) => async (dispatch) => {
   try {
-    await api.delete(`/posts/${id}`);
+    await api.delete(`/bookings/${id}`);
 
     dispatch({
-      type: DELETE_POST,
+      type: DELETE_BOOKING,
       payload: id,
     });
 
-    dispatch(setAlert('Post Removed', 'success'));
+    dispatch(setAlert('Booking Removed', 'success'));
   } catch (err) {
     dispatch({
-      type: POST_ERROR,
+      type: BOOKING_ERROR,
       payload: { msg: err.response.statusText, status: err.response.status },
     });
   }
 };
 
 // Add booking
-export const addPost = (formData) => async (dispatch) => {
+export const addBooking = (formData) => async (dispatch) => {
   try {
-    const res = await api.post('/posts', formData);
+    const res = await api.post('/bookings', formData);
 
     dispatch({
-      type: ADD_POST,
+      type: ADD_BOOKING,
       payload: res.data,
     });
 
-    dispatch(setAlert('Post Created', 'success'));
+    dispatch(setAlert('Booking Created', 'success'));
   } catch (err) {
     dispatch({
-      type: POST_ERROR,
+      type: BOOKING_ERROR,
       payload: { msg: err.response.statusText, status: err.response.status },
     });
   }
 };
 
 // Get booking
-export const getPost = (id) => async (dispatch) => {
+export const getBooking = (id) => async (dispatch) => {
   try {
-    const res = await api.get(`/posts/${id}`);
+    const res = await api.get(`/bookings/${id}`);
 
     dispatch({
-      type: GET_POST,
+      type: GET_BOOKING,
       payload: res.data,
     });
   } catch (err) {
     dispatch({
-      type: POST_ERROR,
+      type: BOOKING_ERROR,
       payload: { msg: err.response.statusText, status: err.response.status },
     });
   }
