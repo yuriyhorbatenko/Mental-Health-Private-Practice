@@ -21,7 +21,7 @@ import Err401 from '../pages/errors/401/401';
 
 const Routes = (props) => {
   return (
-    <section className='container'>
+    <>
       <Alert />
       <Switch>
         <Route exact path='/register' component={Register} />
@@ -40,7 +40,7 @@ const Routes = (props) => {
         <PrivateRoute exact path='/bookings/:id' component={Booking} /> */}
         <Route component={Err404} />
       </Switch>
-    </section>
+    </>
   );
 };
 
