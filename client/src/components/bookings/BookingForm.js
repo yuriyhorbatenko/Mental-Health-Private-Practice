@@ -31,6 +31,8 @@ const BookingForm = ({ addBooking }) => {
         <input type='submit' className='btn btn-dark my-1' value='Submit' />
       </form>
     </div>
+
+
   );
 };
 
