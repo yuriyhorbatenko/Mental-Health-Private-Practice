@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { addPost } from '../../actions/booking';
+import { addBooking } from '../../actions/booking';
 
-const PostForm = ({ addPost }) => {
+const BookingForm = ({ addBooking }) => {
   const [text, setText] = useState('');
 
   return (
-    <div className='post-form'>
+    <div className='Booking-form'>
       <div className='bg-primary p'>
         <h3>Say Something...</h3>
       </div>
@@ -15,7 +15,7 @@ const PostForm = ({ addPost }) => {
         className='form my-1'
         onSubmit={(e) => {
           e.preventDefault();
-          addPost({ text });
+          addBooking({ text });
           setText('');
         }}
       >
@@ -23,7 +23,7 @@ const PostForm = ({ addPost }) => {
           name='text'
           cols='30'
           rows='5'
-          placeholder='Create a post'
+          placeholder='Create a Booking'
           value={text}
           onChange={(e) => setText(e.target.value)}
           required
@@ -31,11 +31,13 @@ const PostForm = ({ addPost }) => {
         <input type='submit' className='btn btn-dark my-1' value='Submit' />
       </form>
     </div>
+
+
   );
 };
 
-PostForm.propTypes = {
-  addPost: PropTypes.func.isRequired,
+BookingForm.propTypes = {
+  addBooking: PropTypes.func.isRequired,
 };
 
-export default connect(null, { addPost })(PostForm);
+export default connect(null, { addBooking })(BookingForm);
