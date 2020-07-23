@@ -1,38 +1,38 @@
 import React, { Fragment, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import PostItem from './BookingItem';
-import PostForm from './BookingForm';
-import { getPosts } from '../../actions/booking';
+import BookingItem from './BookingItem';
+import BookingForm from './BookingForm';
+import { getBookings } from '../../actions/booking';
 
-const Posts = ({ getPosts, post: { posts } }) => {
+const Bookings = ({ getBookings, booking: { bookings } }) => {
   useEffect(() => {
-    getPosts();
-  }, [getPosts]);
+    getBookings();
+  }, [getBookings]);
 
   return (
     <Fragment>
-      <h1 className='large text-primary'>Posts</h1>
+      <h1 className='large text-primary'>Bookings</h1>
       <p className='lead'>
         <i className='fas fa-user' /> Welcome to the community
       </p>
-      <PostForm />
-      <div className='posts'>
-        {posts.map((post) => (
-          <PostItem key={post._id} post={post} />
+      <BookingForm />
+      <div className='bookings'>
+        {bookings.map((booking) => (
+          <BookingItem key={booking._id} booking={booking} />
         ))}
       </div>
     </Fragment>
   );
 };
 
-Posts.propTypes = {
-  getPosts: PropTypes.func.isRequired,
-  post: PropTypes.object.isRequired,
+Bookings.propTypes = {
+  getBookings: PropTypes.func.isRequired,
+  booking: PropTypes.object.isRequired,
 };
 
 const mapStateToProps = (state) => ({
-  post: state.post,
+  booking: state.booking,
 });
 
-export default connect(mapStateToProps, { getPosts })(Posts);
+export default connect(mapStateToProps, { getBookings })(Bookings);
