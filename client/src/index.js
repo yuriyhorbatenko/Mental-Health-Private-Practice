@@ -4,6 +4,8 @@ import App from './App';
 import ErrorBoundary from './ErrorBoundary'
 
 ReactDOM.render(
-    <App />,
-    document.getElementById("root")
-  );
+  <ErrorBoundary render={() => <div className="error">I've got issues.</div>}>
+    <App />
+  </ErrorBoundary>,
+  document.getElementById("root")
+);
