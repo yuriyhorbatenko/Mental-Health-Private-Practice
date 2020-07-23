@@ -109,6 +109,21 @@ h1 {
     box-shadow: 29px 1px 17px -20px rgba(0, 0, 0, 0.226);
 }
 
+#LoginBody {
+    background-image: url(../../img/img0.jpg);
+    height: 93vh;
+    padding-top: 100px;
+}
+
+.LoginForm {
+    width: 600px;
+    margin: 0 auto 0 auto;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0px 5px 15px -2px rgba(0, 0, 0, 0.575);
+    background-color: white;
+}
+
 
 
 
