@@ -1,14 +1,14 @@
 import {
-  GET_POSTS,
-  POST_ERROR,
-  DELETE_POST,
-  ADD_POST,
-  GET_POST,
+  GET_BOOKINGS,
+  BOOKING_ERROR,
+  DELETE_BOOKING,
+  ADD_BOOKING,
+  GET_BOOKING,
 } from '../actions/types';
 
 const initialState = {
-  posts: [],
-  post: null,
+  bookings: [],
+  booking: null,
   loading: true,
   error: {},
 };
@@ -17,31 +17,31 @@ export default function (state = initialState, action) {
   const { type, payload } = action;
 
   switch (type) {
-    case GET_POSTS:
+    case GET_BOOKINGS:
       return {
         ...state,
-        posts: payload,
+        bookings: payload,
         loading: false,
       };
-    case GET_POST:
+    case GET_BOOKING:
       return {
         ...state,
-        post: payload,
+        booking: payload,
         loading: false,
       };
-    case ADD_POST:
+    case ADD_BOOKING:
       return {
         ...state,
-        posts: [payload, ...state.posts],
+        bookings: [payload, ...state.bookings],
         loading: false,
       };
-    case DELETE_POST:
+    case DELETE_BOOKING:
       return {
         ...state,
-        posts: state.posts.filter((post) => post._id !== payload),
+        bookings: state.bookings.filter((booking) => booking._id !== payload),
         loading: false,
       };
-    case POST_ERROR:
+    case BOOKING_ERROR:
       return {
         ...state,
         error: payload,
