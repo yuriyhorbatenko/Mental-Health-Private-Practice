@@ -8,9 +8,6 @@ const BookingForm = ({ addBooking }) => {
 
   return (
     <div className='Booking-form'>
-      <div className='bg-primary p'>
-        <h3>Say Something...</h3>
-      </div>
       <form
         className='form my-1'
         onSubmit={(e) => {
@@ -31,8 +28,6 @@ const BookingForm = ({ addBooking }) => {
         <input type='submit' className='btn btn-dark my-1' value='Submit' />
       </form>
     </div>
-
-
   );
 };
 

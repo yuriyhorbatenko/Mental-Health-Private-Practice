@@ -29,7 +29,9 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
   const guestLinks = (
     <>
       <div className='login'>
-        <a className='login-link ' id='home-link' href='/login'>Login</a>
+        <a className='login-link ' id='home-link' href='/login'>
+          Login
+        </a>
       </div>
     </>
   );
@@ -38,35 +40,42 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
     <>
       <nav className='navbar'>
         <div className='name'>
-          <a className='name-link effect-shine' href='/' id='home-link'>Ilona Menshova, LPC</a>
+          <a className='name-link effect-shine' href='/' id='home-link'>
+            Ilona Menshova, LPC
+          </a>
         </div>
 
         <div className='menu'>
           <div className='menu'>
             <ul>
               <li>
-                <a className="effect-box" href='/about'>About Me</a>
+                <a className='effect-box' href='/about'>
+                  About Me
+                </a>
               </li>
               <li>
-                <a className="effect-box" href='/services'>Services</a>
+                <a className='effect-box' href='/services'>
+                  Services
+                </a>
               </li>
               <li>
-                <a className="effect-box" href='/appointment'>Schedule Appointment</a>
+                <a className='effect-box' href='/appointment'>
+                  Schedule Appointment
+                </a>
               </li>
               <li>
-                <a className="effect-box" href='/links'>Helpful Links</a>
+                <a className='effect-box' href='/links'>
+                  Helpful Links
+                </a>
               </li>
             </ul>
           </div>
         </div>
 
-
-
         {!loading && (
           <Fragment>{isAuthenticated ? authLinks : guestLinks}</Fragment>
         )}
       </nav>
-
     </>
   );
 };
