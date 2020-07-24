@@ -68,51 +68,7 @@ const Login = ({ login, isAuthenticated }) => {
         </div>
       </Fade>
     </>
-    <Fragment>
-      <div id='LoginBody'>
-        <div className='LoginForm'>
-          <Fade>
-            <Form className='form' onSubmit={onSubmit}>
-              <Form.Group controlId='FirstName'>
-                <Form.Label>Email Address</Form.Label>
-                <Form.Control
-                  type='email'
-                  placeholder='Email Address'
-                  name='email'
-                  value={email}
-                  onChange={onChange}
-                  required
-                />
-              </Form.Group>
-
-              <Form.Group controlId='LastName'>
-                <Form.Label>Password</Form.Label>
-                <Form.Control
-                  type='password'
-                  placeholder='Password'
-                  name='password'
-                  value={password}
-                  onChange={onChange}
-                  minLength='6'
-                />
-              </Form.Group>
-
-              <Button name='submit' variant='dark' type='submit' value='Login'>
-                Submit
-              </Button>
-              <Button variant='success'>
-                <Link to='/register'>Register</Link>
-              </Button>
-              <Button variant='outline-danger' href='/'>
-                Go Back
-              </Button>
-            </Form>
-          </Fade>
-        </div>
-      </div>
-    </Fragment>
-  );
-};
+  )}
 
 Login.propTypes = {
   login: PropTypes.func.isRequired,
