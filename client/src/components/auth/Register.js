@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { Fragment, useState } from 'react';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import { setAlert } from '../../actions/alert';
@@ -27,9 +27,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
 
     if (password !== password2) {
       setAlert('Passwords do not match', 'danger');
-    }
-
-    else {
+    } else {
       register({ name, lastName, email, password });
     }
   };
