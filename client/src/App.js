@@ -26,6 +26,7 @@ const App = () => {
             <Navbar />
             <Switch>
               <Route exact path='/' component={Landing} />
+              <Route exact path='/home' component={Landing} />
               <Route component={Routes} />
             </Switch>
             <Footer />

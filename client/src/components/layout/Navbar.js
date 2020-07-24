@@ -29,7 +29,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
   const guestLinks = (
     <>
       <div className='login'>
-        <a className='login-link' id='home-link' href='/login'>Login</a>
+        <a className='login-link ' id='home-link' href='/login'>Login</a>
       </div>
     </>
   );
@@ -38,25 +38,23 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
     <>
       <nav className='navbar'>
         <div className='name'>
-          <a className='name-link' href='/' id='home-link'>
-            Ilona Menshova, LPC<span className='sr-only'>(current)</span>
-          </a>
+          <a className='name-link effect-shine' href='/' id='home-link'>Ilona Menshova, LPC</a>
         </div>
 
         <div className='menu'>
           <div className='menu'>
             <ul>
               <li>
-                <a href='/about'>About Me</a>
+                <a className="effect-box" href='/about'>About Me</a>
               </li>
               <li>
-                <a href='/services'>Services</a>
+                <a className="effect-box" href='/services'>Services</a>
               </li>
               <li>
-                <a href='/appointment'>Schedule Appointment</a>
+                <a className="effect-box" href='/appointment'>Schedule Appointment</a>
               </li>
               <li>
-                <a href='/links'>Helpful Links</a>
+                <a className="effect-box" href='/links'>Helpful Links</a>
               </li>
             </ul>
           </div>

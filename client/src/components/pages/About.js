@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Fade from 'react-reveal/Fade';
+import Zoom from 'react-reveal/Zoom';
 
 class About extends Component {
 
@@ -7,11 +8,11 @@ class About extends Component {
         return (
             <>
                 <Fade>
-                    <div id="AboutBody"></div>
+                    <div id="AboutBody"><Zoom cascade><div id="Body-Text">About Me</div></Zoom></div>
                     <div id="Divider"></div>
 
-                    <div className="about-me">
-                        <h1>About Me</h1>
+                    <div className="About-body">
+
                     </div>
                 </Fade>
             </>

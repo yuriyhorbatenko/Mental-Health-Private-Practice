@@ -37,87 +37,78 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
   }
 
   return (
-    <Fragment>
-      <div id='RegisterBody'>
-        <div className='RegisterForm'>
-          <Fade>
-            <Form onSubmit={onSubmit}>
-              <Form.Group controlId='FirstName'>
-                <Form.Label>First Name</Form.Label>
-                <Form.Control
-                  name='name'
-                  value={name}
-                  onChange={onChange}
-                  type='text'
-                  placeholder='First name'
-                  required
-                />
-              </Form.Group>
+    <>
+      <Fade>
+        <div id="RegisterBody">
+          <Fade top>
+            <div className="RegisterForm">
 
-              <Form.Group controlId='LastName'>
-                <Form.Label>Last Name</Form.Label>
-                <Form.Control
-                  name='lastName'
-                  value={lastName}
-                  onChange={onChange}
-                  type='text'
-                  placeholder='Last name'
-                  required
-                />
-              </Form.Group>
+              <Form onSubmit={onSubmit}>
+                <Form.Group controlId="FirstName">
+                  <Form.Label>First Name</Form.Label>
+                  <Form.Control
+                    name="name"
+                    value={name}
+                    onChange={onChange}
+                    type="text"
+                    placeholder="First name"
+                    required />
+                </Form.Group>
 
-              <Form.Group controlId='Email'>
-                <Form.Label>Email address</Form.Label>
-                <Form.Control
-                  name='email'
-                  value={email}
-                  onChange={onChange}
-                  type='email'
-                  placeholder='Enter email'
-                  required
-                />
-              </Form.Group>
+                <Form.Group controlId="LastName">
+                  <Form.Label>Last Name</Form.Label>
+                  <Form.Control
+                    name="lastName"
+                    value={lastName}
+                    onChange={onChange}
+                    type="text"
+                    placeholder="Last name"
+                    required />
+                </Form.Group>
 
-              <Form.Group controlId='Password1'>
-                <Form.Label>Password</Form.Label>
-                <Form.Control
-                  name='password'
-                  value={password}
-                  onChange={onChange}
-                  type='password'
-                  placeholder='Password'
-                  required
-                />
-              </Form.Group>
+                <Form.Group controlId="Email">
+                  <Form.Label>Email address</Form.Label>
+                  <Form.Control
+                    name="email"
+                    value={email}
+                    onChange={onChange}
+                    type="email"
+                    placeholder="Enter email"
+                    required />
+                </Form.Group>
 
-              <Form.Group controlId='Password2'>
-                <Form.Label>Re-Password</Form.Label>
-                <Form.Control
-                  name='password2'
-                  value={password2}
-                  onChange={onChange}
-                  type='password'
-                  placeholder='Password'
-                  required
-                />
-              </Form.Group>
+                <Form.Group controlId="Password1">
+                  <Form.Label>Password</Form.Label>
+                  <Form.Control
+                    name="password"
+                    value={password}
+                    onChange={onChange}
+                    type="password"
+                    placeholder="Password"
+                    required />
+                </Form.Group>
 
-              <Button
-                name='submit'
-                variant='dark'
-                type='submit'
-                value='Register'
-              >
-                Submit
-              </Button>
-              <Button variant='outline-danger' href='/'>
-                Go Back
-              </Button>
-            </Form>
+                <Form.Group controlId="Password2">
+                  <Form.Label>Re-Password</Form.Label>
+                  <Form.Control
+                    name="password2"
+                    value={password2}
+                    onChange={onChange}
+                    type="password"
+                    placeholder="Password"
+                    required />
+                </Form.Group>
+
+                <Button name="submit" variant="dark" type="submit">Submit</Button>
+                <Button variant='outline-danger' href="/">Go Back</Button>
+
+              </Form>
+
+            </div>
           </Fade>
         </div>
-      </div>
-    </Fragment>
+      </Fade>
+    </>
   );
 };
 

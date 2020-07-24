@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Fade from 'react-reveal/Fade';
+import Zoom from 'react-reveal/Zoom';
 
 class Links extends Component {
 
@@ -7,21 +8,19 @@ class Links extends Component {
         return (
             <>
                 <Fade>
-                    <div id="LinksBody"></div>
+                    <div id="LinksBody"><Zoom cascade><div id="Body-Text">Helpful Links</div></Zoom></div>
                     <div id="Divider"></div>
-                    <div className="Links">
-                        <h1>Helpful Links</h1>
-
-                        <h3 className="topic-links">
-                            Mental Health Delegates: 215-685-6440;<br></br>
-                            Suicide and Crisis Intervention Hotline: 215-686-4420<br></br>
-                            National Suicide Prevention Lifeline: 1-800-273-TALK<br></br>
-                            Department of Behavioral Health Emergency Line: 215-686-4420;<br></br>
-                            Philadelphia Children's Crisis Response Center/Henry Ave. CRC 215-878-2600;<br></br>
-                            CHOP Emergency:215-590-1000<br></br>
-                            Hall-Mercer Crisis Center: 215-829-7271<br></br>
-                        </h3>
-
+                    <div className="Links-body">
+                        <Zoom cascade>
+                            <div className="Links">
+                                <h3 className="topic-links"><a className="effect-underline" href="https://suicidepreventionlifeline.org/" target="_blank">National Suicide Prevention Lifeline:</a><span className="topic-phone">(800)-273-8255</span></h3>
+                                <h3 className="topic-links"><a className="effect-underline" href="https://philadelphia.pa.networkofcare.org/mh/emergency-services.aspx" target="_blank">Suicide and Crisis Intervention Hotline:</a><span className="topic-phone">(215)-686-4420</span></h3>
+                                <h3 className="topic-links"><a className="effect-underline" href="https://dbhids.org" target="_blank">Mental Health Delegates:</a><span className="topic-phone">(215)-685-6440</span></h3>
+                                <h3 className="topic-links"><a className="effect-underline" href="https://www.philachildrenscrc.com/" target="_blank">Philadelphia Children's Crisis Response Center:</a><span className="topic-phone">(844)-793-9429</span></h3>
+                                <h3 className="topic-links"><a className="effect-underline" href="https://www.chop.edu/centers-programs/emergency-department" target="_blank">Children's Hospital of Philadelphia Emergency:</a><span className="topic-phone">(215)-590-1000</span></h3>
+                                <h3 className="topic-links"><a className="effect-underline" href="https://www.med.upenn.edu/hallmercer/" target="_blank">Hall-Mercer Crisis Center:</a><span className="topic-phone">(215)-829-7271</span></h3>
+                            </div>
+                        </Zoom>
                     </div>
                 </Fade>
             </>
