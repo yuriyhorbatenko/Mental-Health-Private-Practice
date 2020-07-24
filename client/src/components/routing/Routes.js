@@ -1,11 +1,12 @@
 import React from 'react';
-import {Route, Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import Register from '../auth/Register';
 import Login from '../auth/Login';
 import Alert from '../layout/Alert';
 import Dashboard from '../dashboard/Dashboard';
 import ProfileForm from '../profile-forms/ProfileForm';
 import Profile from '../profile/Profile';
+import Profiles from '../profiles/Profiles';
 import PrivateRoute from '../routing/PrivateRoute';
 import About from '../pages/About';
 import Services from '../pages/Services';
@@ -13,12 +14,9 @@ import Appointment from '../pages/Appointment';
 import Links from '../pages/Links';
 import Bookings from '../bookings/Bookings';
 import Booking from '../booking/Booking';
-//import Register from './pages/Register';
 import Err404 from '../pages/errors/404/404';
 import Err500 from '../pages/errors/500/500';
 import Err401 from '../pages/errors/401/401';
-//import Navbar from './components/Navbar';
-//import Body from './components/Body';
 
 const Routes = (props) => {
   return (
@@ -27,6 +25,7 @@ const Routes = (props) => {
       <Switch>
         <Route exact path='/register' component={Register} />
         <Route exact path='/login' component={Login} />
+        <Route exact path='/profiles' component={Profiles} />
         <Route exact path='/profile/:id' component={Profile} />
         <Route exact path='/about' component={About} />
         <Route exact path='/services' component={Services} />
