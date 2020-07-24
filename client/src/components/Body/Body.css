@@ -4,11 +4,14 @@ h1 {
 }
 
 #Divider {
+    display: flex;
+    justify-content: center;
     position: relative;
     height: 35px;
     background-color: rgb(52,58,64);
     border-top: 1px solid rgb(209, 208, 208);
-    box-shadow: 0px 5px 15px -2px rgba(0, 0, 0, 0.575);
+    border-bottom: 1px solid rgb(209, 208, 208);
+    box-shadow: 0px 0px 15px 4px rgba(0, 0, 0, 0.842);
     z-index: 10!important;
 }
 
@@ -26,6 +29,16 @@ h1 {
     padding-top: 100px;
     padding-left: 50px;
     line-height: 1.6;
+}
+
+#Body-Text {
+    color: white;
+    font-style: italic;
+    font-size: 50px;
+    padding-top: 120px;
+    padding-left: 50px;
+    line-height: 1.6;
+    letter-spacing: 2px;
 }
 
 #Home-Text2 {
@@ -60,12 +73,37 @@ h1 {
     padding-top: 100px;
 }
 
+.Services-body {
+    display: flex;
+    justify-content: center;
+    background-image: url(../../img/img12.jpg);
+    background-size: cover;
+}
+
+.Links-body {
+    background-image: url(../../img/img12.jpg);
+    background-size: cover;
+    height: 52vh;
+}
+
+.About-body {
+    background-image: url(../../img/img12.jpg);
+    background-size: cover;
+    height: 52vh;
+}
+
+.Appointment-body {
+    background-image: url(../../img/img12.jpg);
+    background-size: cover;
+    height: 52vh;
+}
+
 .RegisterForm {
     width: 900px;
     margin: 0 auto 0 auto;
     padding: 30px;
     border-radius: 20px;
-    box-shadow: 0px 5px 15px -2px rgba(0, 0, 0, 0.575);
+    box-shadow: 0px 5px 15px -2px rgba(0, 0, 0, 0.842);
     background-color: white;
 }
 
@@ -81,20 +119,14 @@ h1 {
     color: red!important;
 }
 
-.Services {
-    display: flex;
-    justify-content: center;
-    background-color: #8b8b8b57;
-}
-
 .topic-text {
     text-align: left;
-    font-size: 19px;
+    font-size: 18px;
 }
 
 .topic-header {
     text-align: center;
-    font-size: 23px;
+    font-size: 22px;
     text-decoration: underline;
     margin-bottom: 20px;
 }
@@ -105,12 +137,14 @@ h1 {
     margin-right: 20px;
     background-color: rgba(245, 245, 245, 0.856);
     z-index: 0;
-    height: 53vh;
-    box-shadow: 29px 1px 17px -20px rgba(0, 0, 0, 0.226);
+    height: 52vh;
+    box-shadow: 29px 1px 17px -20px rgba(0, 0, 0, 0.842);
 }
 
 #LoginBody {
     background-image: url(../../img/img0.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
     height: 93vh;
     padding-top: 100px;
 }
@@ -120,10 +154,75 @@ h1 {
     margin: 0 auto 0 auto;
     padding: 30px;
     border-radius: 20px;
-    box-shadow: 0px 5px 15px -2px rgba(0, 0, 0, 0.575);
+    box-shadow: 0px 5px 15px -2px rgba(0, 0, 0, 0.842);
     background-color: white;
 }
 
+.Links {
+    padding: 100px;
+    padding-top: 120px;
+    width: 900px;
+    margin: 0 auto 0 auto;
+    background-color: rgba(245, 245, 245, 0.856);
+    box-shadow: 29px 1px 17px -20px rgba(0, 0, 0, 0.842);
+    height: 52vh;
+}
 
+.topic-phone {
+    float: right;
+}
 
+.topic-links {
+    position: relative;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
 
+.Links span {
+    text-decoration: none;
+    color: rgb(53,59,65);
+}
+
+.Links a {
+    text-decoration: none;
+    color: rgb(53,59,65);
+}
+
+h1 a {
+    color: #fff;
+    font-size: 2em;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    font-family: 'Dosis', sans-serif;
+}
+
+a.effect-underline:after {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    height: 1em;
+    width: 700px;
+    border-bottom: 2px solid;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: scale(0,1);
+    transform: scale(0,1);
+}
+  
+a.effect-underline:hover:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+  
+a.effect-underline:hover {
+    color: rgb(0, 0, 153);
+}

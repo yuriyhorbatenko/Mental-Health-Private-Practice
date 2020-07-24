@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Fade from 'react-reveal/Fade';
+import Zoom from 'react-reveal/Zoom';
 
 class Services extends Component {
 
@@ -7,26 +8,27 @@ class Services extends Component {
     return (
       <>
         <Fade>
-          <div id="ServicesBody"></div>
+          <div id="ServicesBody"><Zoom cascade><div id="Body-Text">Services</div></Zoom></div>
           <div id="Divider"></div>
-          <div className="Services">
+          <Zoom cascade>
+            <div className="Services-body">
 
-            <div className="specialties topic-section">
-              <h2 className="topic-header">Specialties</h2>
-              <h3 className="topic-text">
-                •	ADHD <br></br>
+              <div className="specialties topic-section">
+                <h2 className="topic-header">Specialties</h2>
+                <h3 className="topic-text">
+                  •	ADHD <br></br>
                                 •	Anxiety <br></br>
                                 •	Depression <br></br>
                                 •	PTSD and Trauma <br></br>
                                 •	Addiction <br></br>
                                 •	Bipolar Disorder <br></br>
-              </h3>
-            </div>
+                </h3>
+              </div>
 
-            <div className="Issues topic-section">
-              <h2 className="topic-header">Issues</h2>
-              <h3 className="topic-text">
-                •	Behavioral Issues <br></br>
+              <div className="Issues topic-section">
+                <h2 className="topic-header">Issues</h2>
+                <h3 className="topic-text">
+                  •	Behavioral Issues <br></br>
                                 •	Coping Skills <br></br>
                                 •	Dual Diagnosis <br></br>
                                 •	Family Conflict <br></br>
@@ -44,28 +46,29 @@ class Services extends Component {
                                 •	Trauma and PTSD <br></br>
                                 •	Women's Issues <br></br>
                                 •	Anger Management <br></br>
-              </h3>
-            </div>
+                </h3>
+              </div>
 
-            <div className="Age topic-section">
-              <h2 className="topic-header">Age</h2>
-              <h3 className="topic-text">
-                •	Adolescents / Teenagers (14 to 19) <br></br>
+              <div className="Age topic-section">
+                <h2 className="topic-header">Age</h2>
+                <h3 className="topic-text">
+                  •	Adolescents / Teenagers (14 to 19) <br></br>
                                 •	Adults <br></br>
                                 •	Elders (65+) <br></br>
-              </h3>
-            </div>
+                </h3>
+              </div>
 
-            <div className="Sexuality topic-section">
-              <h2 className="topic-header">Sexuality</h2>
-              <h3 className="topic-text">
-                •	Bisexual <br></br>
+              <div className="Sexuality topic-section">
+                <h2 className="topic-header">Sexuality</h2>
+                <h3 className="topic-text">
+                  •	Bisexual <br></br>
                                 •	Gay <br></br>
                                 •	Lesbian <br></br>
-              </h3>
-            </div>
+                </h3>
+              </div>
 
-          </div>
+            </div>
+          </Zoom>
         </Fade>
       </>
     )

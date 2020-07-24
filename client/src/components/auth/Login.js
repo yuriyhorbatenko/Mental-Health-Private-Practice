@@ -7,6 +7,7 @@ import Fade from 'react-reveal/Fade';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 
+
 const Login = ({ login, isAuthenticated }) => {
   const [formData, setFormData] = useState({
     email: '',
@@ -29,41 +30,43 @@ const Login = ({ login, isAuthenticated }) => {
 
   return (
     <>
-      <div id="LoginBody">
-        <div className="LoginForm">
-          <Fade>
-            <Form className="form" onSubmit={onSubmit}>
+      <Fade>
+        <div id="LoginBody">
+          <Fade top>
+            <div className="LoginForm">
+              <Form className="form" onSubmit={onSubmit}>
 
-              <Form.Group controlId="FirstName">
-                <Form.Label>Email Address</Form.Label>
-                <Form.Control
-                  type="email"
-                  placeholder="Email Address"
-                  name="email"
-                  value={email}
-                  onChange={onChange}
-                  required />
-              </Form.Group>
+                <Form.Group controlId="FirstName">
+                  <Form.Label>Email Address</Form.Label>
+                  <Form.Control
+                    type="email"
+                    placeholder="Email Address"
+                    name="email"
+                    value={email}
+                    onChange={onChange}
+                    required />
+                </Form.Group>
 
-              <Form.Group controlId="LastName">
-                <Form.Label>Password</Form.Label>
-                <Form.Control
-                  type="password"
-                  placeholder="Password"
-                  name="password"
-                  value={password}
-                  onChange={onChange}
-                  minLength="6" />
-              </Form.Group>
+                <Form.Group controlId="LastName">
+                  <Form.Label>Password</Form.Label>
+                  <Form.Control
+                    type="password"
+                    placeholder="Password"
+                    name="password"
+                    value={password}
+                    onChange={onChange}
+                    minLength="6" />
+                </Form.Group>
 
-              <Button name="submit" variant="dark" type="submit" value="Login">Submit</Button>
-              <Button variant='success' href="/register">Register</Button>
-              <Button variant='outline-danger' href="/">Go Back</Button>
+                <Button name="submit" variant="dark" type="submit" value="Login">Submit</Button>
+                <Button variant='success' href="/register">Register</Button>
+                <Button variant='outline-danger' href="/">Go Back</Button>
 
-            </Form>
+              </Form>
+            </div>
           </Fade>
         </div>
-      </div>
+      </Fade>
     </>
   );
 };
