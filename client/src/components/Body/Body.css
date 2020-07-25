@@ -267,3 +267,36 @@ a.effect-underline:hover {
     height: auto important;
     height: 900px;
 }
+
+.About-section {
+    margin: 0 auto 0 auto;
+    width: 1000px;
+    display: flex;
+    justify-content: center;
+}
+
+.About-text {
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    font-style: italic;
+    
+}
+
+.About-text span {
+    font-size: 25px;
+    font-style: italic;
+}
+
+.About-img {
+    padding: 20px;
+    padding-top: 30px;
+}
+
+.About-img img{
+    width: 150px;
+    border: 1px solid white;
+    padding: 5px;
+    border-radius: 3px;
+    box-shadow: 29px 1px 17px -20px rgba(0, 0, 0, 0.842);
+}
