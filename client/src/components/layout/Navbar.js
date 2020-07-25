@@ -22,22 +22,21 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
   );
 
   const guestLinks = (
-    <>
-      <div className='login'>
-        <a className='login-link ' id='home-link' href='/login'>
-          Login
-        </a>
-      </div>
-    </>
+    <div className='login'>
+      <Link to='/login'>
+        <i className='login-link' /> <span className='hide-sm'>Login</span>
+      </Link>
+    </div>
   );
 
   return (
     <>
       <nav className='navbar'>
         <div className='name'>
-          <a className='name-link effect-shine' href='/' id='home-link'>
-            Ilona Menshova, LPC
-          </a>
+          <Link to='/'>
+            <i id='home-link' className='name-link effect-shine' /> Ilona
+            Menshova, LPC
+          </Link>
         </div>
 
         <div className='menu'>

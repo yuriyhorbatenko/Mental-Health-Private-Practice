@@ -28,7 +28,7 @@ const Login = ({ login, isAuthenticated }) => {
   }
 
   return (
-    <>
+    <Fragment>
       <Fade>
         <div id='LoginBody'>
           <Fade top>
@@ -66,18 +66,18 @@ const Login = ({ login, isAuthenticated }) => {
                 >
                   Submit
                 </Button>
-                <Button variant='success' href='/register'>
-                  Register
+                <Button variant='success'>
+                  <Link to='/register'>Register</Link>
                 </Button>
-                <Button variant='outline-danger' href='/'>
-                  Go Back
+                <Button variant='outline-danger'>
+                  <Link to='/'>Go Back</Link>
                 </Button>
               </Form>
             </div>
           </Fade>
         </div>
       </Fade>
-    </>
+    </Fragment>
   );
 };
 
