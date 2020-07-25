@@ -6,11 +6,17 @@ const profileSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: 'User',
   },
+  dob: {
+    type: Date,
+    required: true,
+  },
   address: {
     type: String,
+    required: true,
   },
-  payment: {
-    type: String,
+  phoneNumber: {
+    type: Number,
+    required: true,
   },
   date: {
     type: Date,

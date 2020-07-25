@@ -6,7 +6,7 @@ import { deleteBooking } from '../../actions/booking';
 const BookingItem = ({
   deleteBooking,
   auth,
-  booking: { _id, text, name, user },
+  booking: { _id, text, user },
   showActions,
 }) => (
   <div className='booking bg-white p-1 my-1'>
