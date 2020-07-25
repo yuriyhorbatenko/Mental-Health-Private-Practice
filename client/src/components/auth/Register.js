@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { Fragment, useState } from 'react';
 import { connect } from 'react-redux';
-import { Redirect } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import { setAlert } from '../../actions/alert';
 import { register } from '../../actions/auth';
 import PropTypes from 'prop-types';
@@ -37,7 +37,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
   }
 
   return (
-    <>
+    <Fragment>
       <Fade>
         <div id='RegisterBody'>
           <Fade top>
@@ -106,15 +106,15 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
                 <Button name='submit' variant='dark' type='submit'>
                   Submit
                 </Button>
-                <Button variant='outline-danger' href='/'>
-                  Go Back
+                <Button variant='outline-danger'>
+                  <Link to='/'>Go Back</Link>
                 </Button>
               </Form>
             </div>
           </Fade>
         </div>
       </Fade>
-    </>
+    </Fragment>
   );
 };
 
