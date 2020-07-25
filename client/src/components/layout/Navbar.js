@@ -44,24 +44,24 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
           <div className='menu'>
             <ul>
               <li>
-                <a className='effect-box' href='/about'>
+                <Link className='effect-box' to='/about'>
                   About Me
-                </a>
+                </Link>
               </li>
               <li>
-                <a className='effect-box' href='/services'>
+                <Link className='effect-box' to='/services'>
                   Services
-                </a>
+                </Link>
               </li>
               <li>
-                <a className='effect-box' href='/appointment'>
+                <Link className='effect-box' to='/appointment'>
                   Schedule Appointment
-                </a>
+                </Link>
               </li>
               <li>
-                <a className='effect-box' href='/links'>
+                <Link className='effect-box' to='/links'>
                   Helpful Links
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
