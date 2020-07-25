@@ -3,7 +3,8 @@ const connectDB = require('./config/db');
 const routes = require('./routes');
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+
+connectDB();
 
 //init middleware
 app.use(express.urlencoded({ extended: true }));
@@ -22,5 +23,6 @@ if (process.env.NODE_ENV === 'production') {
   });
 }
 
-connectDB();
+const PORT = process.env.PORT || 5000;
+
 app.listen(PORT, () => console.log('Server started on port' + PORT));
