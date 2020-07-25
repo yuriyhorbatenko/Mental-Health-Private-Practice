@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react';
+import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { Link, Redirect } from 'react-router-dom';
 import { setAlert } from '../../actions/alert';
@@ -37,7 +37,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
   }
 
   return (
-    <Fragment>
+    <>
       <Fade>
         <div id='RegisterBody'>
           <Fade top>
@@ -114,7 +114,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
           </Fade>
         </div>
       </Fade>
-    </Fragment>
+    </>
   );
 };
 
