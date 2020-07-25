@@ -9,14 +9,14 @@ import Routes from './components/routing/Routes';
 // Redux
 import { Provider } from 'react-redux';
 import store from './store';
-import { loadUser } from './actions/auth';
-import setAuthToken from './utils/setAuthToken';
+// import { loadUser } from './actions/auth';
+// import setAuthToken from './utils/setAuthToken';
 
 const App = () => {
-  useEffect(() => {
-    setAuthToken(localStorage.token);
-    store.dispatch(loadUser());
-  }, []);
+  // useEffect(() => {
+  //   setAuthToken(localStorage.token);
+  //   store.dispatch(loadUser());
+  // }, []);
 
   return (
     <Body>
