@@ -6,15 +6,21 @@ const bookingSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: 'User',
   },
-  text: {
+  profile: {
+    type: Schema.Types.ObjectId,
+    ref: 'Profile',
+  },
+  appointmentDate: {
+    type: Date,
+    required: true,
+  },
+  appointmentTime: {
     type: String,
     required: true,
   },
-  name: {
+  text: {
     type: String,
-  },
-  avatar: {
-    type: String,
+    required: true,
   },
   date: {
     type: Date,
