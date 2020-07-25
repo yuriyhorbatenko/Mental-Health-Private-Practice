@@ -9,14 +9,13 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json({ extended: false }));
 
-// Add routes, both API and view
-
 // Serve static assets in production
 if (process.env.NODE_ENV === 'production') {
   // Set static folder
   app.use(express.static('client/build'));
 }
 
+// Add routes, both API and view
 app.use(routes);
 
 connectDB();
