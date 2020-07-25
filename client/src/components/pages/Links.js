@@ -21,6 +21,7 @@ class Links extends Component {
                     className='effect-underline'
                     href='https://suicidepreventionlifeline.org/'
                     target='_blank'
+                    rel='noopener noreferrer'
                   >
                     National Suicide Prevention Lifeline:
                   </a>
@@ -31,6 +32,7 @@ class Links extends Component {
                     className='effect-underline'
                     href='https://philadelphia.pa.networkofcare.org/mh/emergency-services.aspx'
                     target='_blank'
+                    rel='noopener noreferrer'
                   >
                     Suicide and Crisis Intervention Hotline:
                   </a>
@@ -41,6 +43,7 @@ class Links extends Component {
                     className='effect-underline'
                     href='https://dbhids.org'
                     target='_blank'
+                    rel='noopener noreferrer'
                   >
                     Mental Health Delegates:
                   </a>
@@ -51,6 +54,7 @@ class Links extends Component {
                     className='effect-underline'
                     href='https://www.philachildrenscrc.com/'
                     target='_blank'
+                    rel='noopener noreferrer'
                   >
                     Philadelphia Children's Crisis Response Center:
                   </a>
@@ -61,6 +65,7 @@ class Links extends Component {
                     className='effect-underline'
                     href='https://www.chop.edu/centers-programs/emergency-department'
                     target='_blank'
+                    rel='noopener noreferrer'
                   >
                     Children's Hospital of Philadelphia Emergency:
                   </a>
@@ -71,6 +76,7 @@ class Links extends Component {
                     className='effect-underline'
                     href='https://www.med.upenn.edu/hallmercer/'
                     target='_blank'
+                    rel='noopener noreferrer'
                   >
                     Hall-Mercer Crisis Center:
                   </a>
