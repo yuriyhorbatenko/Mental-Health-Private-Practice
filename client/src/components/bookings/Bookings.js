@@ -11,11 +11,9 @@ const Bookings = ({ getBookings, booking: { bookings } }) => {
 
   return (
     <Fragment>
-      <div className='bookings'>
-        {bookings.map((booking) => (
-          <BookingItem key={booking._id} booking={booking} />
-        ))}
-      </div>
+      {bookings.map((booking) => (
+        <BookingItem key={booking._id} booking={booking} />
+      ))}
     </Fragment>
   );
 };
