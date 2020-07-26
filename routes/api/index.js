@@ -5,7 +5,7 @@ const router = require('express').Router();
 router.use('/users', require('./users'));
 router.use('/auth', require('./auth'));
 router.use('/profile', require('./profile'));
-router.use('/booking', require('./bookings'));
+router.use('/bookings', require('./bookings'));
 
 // For anything else, render the html page
 router.use(function (req, res) {

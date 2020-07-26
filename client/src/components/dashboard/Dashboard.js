@@ -48,12 +48,15 @@ const Dashboard = ({
               <Fragment>
                 <h2>Profile information</h2>
                 <p>
+                  <i className='profdash' /> DOB: {profile && profile.dob}
+                </p>
+                <p>
                   <i className='profdash' /> Address:{' '}
                   {profile && profile.address}
                 </p>
                 <p>
-                  <i className='profdash' /> Payment:{' '}
-                  {profile && profile.payment}
+                  <i className='profdash' /> Phone Number:{' '}
+                  {profile && profile.phoneNumber}
                 </p>
 
                 <DashboardActions />

@@ -7,12 +7,19 @@ const Booking = require('../../models/Booking');
 const User = require('../../models/User');
 const checkObjectId = require('../../middleware/checkObjectId');
 
-// @route    POST api/booking
+// @route    POST api/bookings
 // @desc     Create a booking
 // @access   Private
 router.post(
   '/',
-  [auth, [check('text', 'Text is required').not().isEmpty()]],
+  [
+    auth,
+    [
+      check('appointmentDate', 'Appointment Date is Required').not().isEmpty(),
+      check('appointmentTime', 'Appointment Time is Required').not().isEmpty(),
+      check('text', 'Text is required').not().isEmpty(),
+    ],
+  ],
   async (req, res) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
@@ -23,9 +30,10 @@ router.post(
       const user = await User.findById(req.user.id).select('-password');
 
       const newBooking = new Booking({
+        appointmentDate: req.body.appointmentDate,
+        appointmentTime: req.body.appointmentTime,
         text: req.body.text,
         name: user.name,
-        avatar: user.avatar,
         user: req.user.id,
       });
 

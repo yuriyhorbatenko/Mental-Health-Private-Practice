@@ -2,32 +2,74 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { addBooking } from '../../actions/booking';
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
+import Fade from 'react-reveal/Fade';
 
 const BookingForm = ({ addBooking }) => {
-  const [text, setText] = useState('');
+  // const [text, setText] = useState('');
+  const [formData, setFormData] = useState({
+    appointmentDate: '',
+    appointmentTime: '',
+    text: '',
+  });
+
+  const { appointmentDate, appointmentTime, text } = formData;
+
+  const onChange = (e) =>
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+
+  const onSubmit = async (e) => {
+    e.preventDefault();
+    addBooking({ appointmentDate, appointmentTime, text });
+  };
 
   return (
-    <div className='Booking-form'>
-      <form
-        className='form my-1'
-        onSubmit={(e) => {
-          e.preventDefault();
-          addBooking({ text });
-          setText('');
-        }}
-      >
-        <textarea
-          name='text'
-          cols='30'
-          rows='5'
-          placeholder='Create a Booking'
-          value={text}
-          onChange={(e) => setText(e.target.value)}
-          required
-        />
-        <input type='submit' className='btn btn-dark my-1' value='Submit' />
-      </form>
-    </div>
+    <>
+      <Fade>
+        <div className='Booking-form'>
+          <Form onSubmit={onSubmit}>
+            <Form.Group controlId='appointmentDate'>
+              <Form.Label>Appointment Date</Form.Label>
+              <Form.Control
+                name='appointmentDate'
+                value={appointmentDate}
+                placeholder='07/25/2020'
+                onChange={onChange}
+                type='text'
+                required
+              />
+            </Form.Group>
+
+            <Form.Group controlId='appointmentTime'>
+              <Form.Label>Appointment Time</Form.Label>
+              <Form.Control
+                name='appointmentTime'
+                value={appointmentTime}
+                placeholder='5pm'
+                onChange={onChange}
+                type='text'
+                required
+              />
+            </Form.Group>
+            <Form.Group controlId='text'>
+              <Form.Label>Comments</Form.Label>
+              <Form.Control
+                name='text'
+                value={text}
+                placeholder='Id like to discuss xyz'
+                onChange={onChange}
+                type='text'
+                required
+              />
+            </Form.Group>
+            <Button name='submit' variant='dark' type='submit' value='Submit'>
+              Submit
+            </Button>
+          </Form>
+        </div>
+      </Fade>
+    </>
   );
 };
 

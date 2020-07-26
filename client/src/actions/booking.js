@@ -11,7 +11,7 @@ import {
 // Get bookings
 export const getBookings = () => async (dispatch) => {
   try {
-    const res = await api.get('/booking');
+    const res = await api.get('/bookings');
 
     dispatch({
       type: GET_BOOKINGS,
@@ -28,7 +28,7 @@ export const getBookings = () => async (dispatch) => {
 // Delete booking
 export const deleteBooking = (id) => async (dispatch) => {
   try {
-    await api.delete(`/booking/${id}`);
+    await api.delete(`/bookings/${id}`);
 
     dispatch({
       type: DELETE_BOOKING,
@@ -47,7 +47,7 @@ export const deleteBooking = (id) => async (dispatch) => {
 // Add booking
 export const addBooking = (formData) => async (dispatch) => {
   try {
-    const res = await api.post('/booking', formData);
+    const res = await api.post('/bookings', formData);
 
     dispatch({
       type: ADD_BOOKING,
@@ -66,7 +66,7 @@ export const addBooking = (formData) => async (dispatch) => {
 // Get booking
 export const getBooking = (id) => async (dispatch) => {
   try {
-    const res = await api.get(`/booking/${id}`);
+    const res = await api.get(`/bookings/${id}`);
 
     dispatch({
       type: GET_BOOKING,

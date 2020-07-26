@@ -5,8 +5,9 @@ import { connect } from 'react-redux';
 import { createProfile, getCurrentProfile } from '../../actions/profile';
 
 const initialState = {
+  dob: '',
   address: '',
-  payment: '',
+  phoneNumber: '',
 };
 
 const ProfileForm = ({
@@ -28,7 +29,7 @@ const ProfileForm = ({
     }
   }, [loading, getCurrentProfile, profile]);
 
-  const { address, payment } = formData;
+  const { dob, address, phoneNumber } = formData;
 
   const onChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -49,6 +50,16 @@ const ProfileForm = ({
         <div className='form-group'>
           <input
             type='text'
+            placeholder='01/01/2000'
+            name='dob'
+            value={dob}
+            onChange={onChange}
+          />
+          <small className='form-text'>Please provide your date of birth</small>
+        </div>
+        <div className='form-group'>
+          <input
+            type='text'
             placeholder='123 private lane route'
             name='address'
             value={address}
@@ -61,12 +72,12 @@ const ProfileForm = ({
         <div className='form-group'>
           <input
             type='text'
-            placeholder='555-55555-5555'
-            name='payment'
-            value={payment}
+            placeholder='(555) 555-5555'
+            name='phoneNumber'
+            value={phoneNumber}
             onChange={onChange}
           />
-          <small className='form-text'>Please provide your payment info</small>
+          <small className='form-text'>Please provide your Phone Number</small>
         </div>
 
         <input type='submit' className='btn btn-primary my-1' />
