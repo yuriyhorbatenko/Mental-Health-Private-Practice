@@ -6,27 +6,37 @@ import { logout } from '../../actions/auth';
 import './Navbar.css';
 
 const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
+
   const authLinks = (
-    <ul>
-      <li>
-        <Link to='/dashboard'>
-          <i className='fas fa-user' />{' '}
-          <span className='hide-sm'>My Profile</span>
-        </Link>
-        <a onClick={logout} href='#!'>
-          <i className='fas fa-sign-out-alt' />{' '}
-          <span className='hide-sm'>Logout</span>
-        </a>
-      </li>
-    </ul>
+    <>
+      <div className="profile-menu">
+
+        <div className='dashboard'>
+          <Link to='/dashboard' className='effect-box2'>
+            <i className='icon-nav fas fa-user' />{' '}
+            <span className='hide-sm underline-opening'>My Profile</span>
+          </Link>
+        </div>
+
+        <div className='logout'>
+          <a onClick={logout} href='#!' className='effect-box2'>
+            <i className='icon-nav fas fa-sign-out-alt' />{' '}
+            <span className='hide-sm underline-opening'>Logout</span>
+          </a>
+        </div>
+
+      </div>
+    </>
   );
 
   const guestLinks = (
-    <div className='login'>
-      <Link to='/login'>
-        <i className='login-link' /> <span className='hide-sm'>Login</span>
-      </Link>
-    </div>
+    <>
+      <div className='login'>
+        <Link to='/login'>
+          <i className='login-link' /> <span className='hide-sm effect-box2'>Login</span>
+        </Link>
+      </div>
+    </>
   );
 
   return (
@@ -34,8 +44,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
       <nav className='navbar'>
         <div className='name'>
           <Link to='/'>
-            <i id='home-link' className='name-link effect-shine' /> Ilona
-            Menshova, LPC
+            <div id='home-link' className='name-link'>Ilona Menshova, LPC</div>
           </Link>
         </div>
 
