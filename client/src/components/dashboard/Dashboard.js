@@ -30,6 +30,7 @@ const Dashboard = ({
 
       <Fade>
         <div className='Dashboard-Body'>
+
           <Fade top>
             <div className='Dashboard-Form'>
 
@@ -94,18 +95,22 @@ const Dashboard = ({
 
                     </Fragment>
                   )}
+
               </div>
 
               {bookings !== null ? (
                 <Fragment>
 
+
                   <div className="Booking-information">
                     <h2 className="dbHeaderRight">Booking information</h2>
                     <Bookings />
+
                   </div>
 
                 </Fragment>
               ) : (
+
                   <Fragment>
 
                     <div className='Booking-information'>
@@ -120,6 +125,7 @@ const Dashboard = ({
 
             </div>
           </Fade>
+
         </div>
       </Fade>
 

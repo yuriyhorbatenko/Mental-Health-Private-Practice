@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { deleteBooking } from '../../actions/booking';
 import Button from 'react-bootstrap/Button';
@@ -10,10 +11,12 @@ const BookingItem = ({
   booking: { booking, _id, text, appointmentDate, appointmentTime, user },
   showActions,
 }) => (
-    <Fragment>
 
-      {!auth.loading && user === auth.user._id && (
-        <>
+  <>
+    {showActions && (
+      <Fragment>
+        {!auth.loading && user === auth.user._id && (
+          <>
           <p>
             <i className='profdash' />Appointment Date: <span className="dbInfo">{appointmentDate}</span>
           </p>
@@ -27,10 +30,11 @@ const BookingItem = ({
           </p>
           <Button variant='outline-danger' onClick={() => deleteBooking(_id)}><i className='fas fa-trash' /> Delete Booking </Button>
         </>
-      )}
-
-    </Fragment>
-  );
+        )}
+      </Fragment>
+    )}
+  </>
+);
 
 BookingItem.defaultProps = {
   showActions: true,

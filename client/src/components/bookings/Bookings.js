@@ -1,15 +1,18 @@
 import React, { Fragment, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import Spinner from '../layout/Spinner';
 import BookingItem from './BookingItem';
 import { getBookings } from '../../actions/booking';
 
-const Bookings = ({ getBookings, booking: { bookings } }) => {
+const Bookings = ({ getBookings, booking: { bookings, loading } }) => {
   useEffect(() => {
     getBookings();
   }, [getBookings]);
 
-  return (
+  return loading ? (
+    <Spinner />
+  ) : (
     <Fragment>
       {bookings.map((booking) => (
         <BookingItem key={booking._id} booking={booking} />
