@@ -15,7 +15,7 @@ router.get('/me', auth, async (req, res) => {
   try {
     const profile = await Profile.findOne({
       user: req.user.id,
-    }).populate('user', ['name', 'email', 'avatar']);
+    }).populate('user', ['name', 'lastName', 'email']);
 
     if (!profile) {
       return res.status(400).json({ msg: 'There is no profile for this user' });
@@ -36,8 +36,9 @@ router.post(
   [
     auth,
     [
+      check('dob', 'DOB is required').not().isEmpty(),
       check('address', 'Address is required').not().isEmpty(),
-      check('payment', 'Payment is required').not().isEmpty(),
+      check('phoneNumber', 'PhoneNumber is required').not().isEmpty(),
     ],
   ],
   async (req, res) => {
@@ -45,12 +46,13 @@ router.post(
     if (!errors.isEmpty()) {
       return res.status(400).json({ errors: errors.array() });
     }
-    const { address, payment } = req.body;
+    const { dob, address, phoneNumber } = req.body;
 
     const profileFields = {
       user: req.user.id,
+      dob,
       address,
-      payment,
+      phoneNumber,
     };
 
     try {

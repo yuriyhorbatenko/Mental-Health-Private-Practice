@@ -6,7 +6,7 @@ import { deleteBooking } from '../../actions/booking';
 const BookingItem = ({
   deleteBooking,
   auth,
-  booking: { _id, text, user },
+  booking: { _id, text, appointmentDate, appointmentTime, user },
   showActions,
 }) => (
   <div className='booking bg-white p-1 my-1'>
@@ -15,7 +15,9 @@ const BookingItem = ({
         <Fragment>
           {!auth.loading && user === auth.user._id && (
             <>
-              <p className='my-1'>{text}</p>
+              <p className='my-1'>Appointment Date: {appointmentDate}</p>
+              <p className='my-1'>Appointment Time: {appointmentTime}</p>
+              <p className='my-1'>Comments: {text}</p>
               <button
                 onClick={() => deleteBooking(_id)}
                 type='button'
