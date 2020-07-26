@@ -10,12 +10,28 @@ const profileSchema = new Schema({
     type: Date,
     required: true,
   },
-  address: {
+  phone: {
     type: String,
     required: true,
   },
-  phoneNumber: {
-    type: Number,
+  address1: {
+    type: String,
+    required: true,
+  },
+  address2: {
+    type: String,
+    required: true,
+  },
+  city: {
+    type: String,
+    required: true,
+  },
+  statee: {
+    type: String,
+    required: true,
+  },
+  zip: {
+    type: String,
     required: true,
   },
   date: {

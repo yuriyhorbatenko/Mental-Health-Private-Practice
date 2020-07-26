@@ -48,12 +48,6 @@ const Dashboard = ({
                 <p>
                   <i className='fas' /> First Name: {user && user.name}
                 </p>
-                <p>
-                  <i className='fas' /> Last Name: {user && user.lastName}
-                </p>
-                <p>
-                  <i className='fas' /> Email: {user && user.email}
-                </p>
               </div>
 
               {profile !== null ? (
@@ -66,11 +60,11 @@ const Dashboard = ({
                     </p>
                     <p>
                       <i className='profdash' /> Address:{' '}
-                      {profile && profile.address}
+                      {profile && profile.address1}
                     </p>
                     <p>
                       <i className='profdash' /> Phone Number:{' '}
-                      {profile && profile.phoneNumber}
+                      {profile && profile.number}
                     </p>
 
                     <DashboardActions />
