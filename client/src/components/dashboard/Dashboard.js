@@ -31,33 +31,52 @@ const Dashboard = ({
       <Fade>
         <div className='Dashboard-Body'>
           <div className='Dashboard-Form'>
+
             <h1 className='dbhead'>User Dashboard</h1>
             <p className='lead'>
               <i className='fas fa-user' /> Welcome {user && user.name}
             </p>
 
-            <div className='Account-and-Profile'>
-              <div className='Account-information'>
-                <h2>Account information</h2>
+
+            <div className="Account-and-Profile">
+
+              <div className="Account-information">
+                <h2 className="dbHeader">Account information</h2>
                 <p>
-                  <i className='fas' /> First Name: {user && user.name}
+                  <i className='fas' />First Name: <span className="dbInfo">{user && user.name}</span>
                 </p>
+                <p>
+                  <i className='fas' />Last Name: <span className="dbInfo">{user && user.lastName}</span>
+                </p>
+                <p>
+                  <i className='fas' />Email: <span className="dbInfo">{user && user.email}</span>
+                </p>
+                <Button variant='danger' onClick={() => deleteAccount()}><i className='fas fa-user-minus' /> Delete My Account </Button>
               </div>
 
               {profile !== null ? (
                 <Fragment>
-                  <div className='Profile-information'>
-                    <h2>Profile information</h2>
+
+
+                  <div className="Profile-information">
+                    <h2 className="dbHeader">Profile information</h2>
                     <p>
-                      <i className='profdash' /> DOB: {profile && profile.dob}
+                      <i className='profdash' />Phone Number: <span className="dbInfo">{profile && profile.phone}</span>
                     </p>
                     <p>
-                      <i className='profdash' /> Address:{' '}
-                      {profile && profile.address1}
+                      <i className='profdash' />Date Of Birth: <span className="dbInfo">{profile && profile.dob}</span>
                     </p>
                     <p>
-                      <i className='profdash' /> Phone Number:{' '}
-                      {profile && profile.number}
+                      <i className='profdash' />Address: <span className="dbInfo">{profile && profile.address1} {profile && profile.address2}</span>
+                    </p>
+                    <p>
+                      <i className='profdash' />City: <span className="dbInfo">{profile && profile.city}</span>
+                    </p>
+                    <p>
+                      <i className='profdash' />State: <span className="dbInfo">{profile && profile.statee}</span>
+                    </p>
+                    <p>
+                      <i className='profdash' />Zip Code: <span className="dbInfo">{profile && profile.zip}</span>
                     </p>
 
                     <DashboardActions />
@@ -80,8 +99,13 @@ const Dashboard = ({
 
             {bookings !== null ? (
               <Fragment>
-                <div className='Booking-information'>
-                  <h2>Booking information</h2>
+
+                <div className="Booking-information">
+                  <h2 className="dbHeader">Booking information</h2>
+                  <p>
+                    <i className='profdash' />Appointment Date: <span className="dbInfo">{bookings && bookings.appointmentDate}</span>
+                  </p>
+
                   <div className='bookings'>
                     <Bookings />
                   </div>
@@ -98,14 +122,6 @@ const Dashboard = ({
               </Fragment>
             )}
 
-            <div className='Delete-My-Account'>
-              <button
-                className='btn btn-danger'
-                onClick={() => deleteAccount()}
-              >
-                <i className='fas fa-user-minus' /> Delete My Account
-              </button>
-            </div>
           </div>
         </div>
       </Fade>

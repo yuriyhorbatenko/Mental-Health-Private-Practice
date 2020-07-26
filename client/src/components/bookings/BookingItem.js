@@ -9,6 +9,7 @@ const BookingItem = ({
   booking: { _id, text, appointmentDate, appointmentTime, user },
   showActions,
 }) => (
+
   <Fragment>
     <div className='booking bg-white p-1 my-1'>
       {showActions && !_id ? (
