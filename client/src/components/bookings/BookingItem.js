@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { deleteBooking } from '../../actions/booking';
 
@@ -9,31 +10,26 @@ const BookingItem = ({
   booking: { _id, text, appointmentDate, appointmentTime, user },
   showActions,
 }) => (
-
-  <Fragment>
-    <div className='booking bg-white p-1 my-1'>
-      {showActions && !_id ? (
-        <p>no Bookings</p>
-      ) : (
-        <>
-          {!auth.loading && user === auth.user._id && (
-            <>
-              <p className='my-1'>Appointment Date: {appointmentDate}</p>
-              <p className='my-1'>Appointment Time: {appointmentTime}</p>
-              <p className='my-1'>Comments: {text}</p>
-              <button
-                onClick={() => deleteBooking(_id)}
-                type='button'
-                className='btn btn-danger'
-              >
-                <i className='fas fa-times' />
-              </button>
-            </>
-          )}
-        </>
-      )}
-    </div>
-  </Fragment>
+  <>
+    {showActions && (
+      <Fragment>
+        {!auth.loading && user === auth.user._id && (
+          <>
+            <p className='my-1'>{appointmentDate}</p>
+            <p className='my-1'>{appointmentTime}</p>
+            <p className='my-1'>{text}</p>
+            <button
+              onClick={() => deleteBooking(_id)}
+              type='button'
+              className='btn btn-danger'
+            >
+              <i className='fas fa-times' />
+            </button>
+          </>
+        )}
+      </Fragment>
+    )}
+  </>
 );
 
 BookingItem.defaultProps = {

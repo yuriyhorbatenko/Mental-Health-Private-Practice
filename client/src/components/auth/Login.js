@@ -24,7 +24,7 @@ const Login = ({ login, isAuthenticated }) => {
   };
 
   if (isAuthenticated) {
-    return <Redirect to='/dashboard' />;
+    return <Redirect to='/' />;
   }
 
   return (
@@ -58,10 +58,20 @@ const Login = ({ login, isAuthenticated }) => {
                   />
                 </Form.Group>
 
-                <Button variant='dark' name='submit' type='submit' value='Login'>Submit</Button>
-                <Link to='/register'><Button variant='outline-success'>Register</Button></Link>
-                <Link to='/'><Button variant='outline-danger'>Go Back</Button></Link>
-
+                <Button
+                  variant='dark'
+                  name='submit'
+                  type='submit'
+                  value='Login'
+                >
+                  Submit
+                </Button>
+                <Link to='/register'>
+                  <Button variant='outline-success'>Register</Button>
+                </Link>
+                <Link to='/'>
+                  <Button variant='outline-danger'>Go Back</Button>
+                </Link>
               </Form>
             </div>
           </Fade>
