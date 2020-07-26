@@ -7,6 +7,7 @@ import { getCurrentProfile, deleteAccount } from '../../actions/profile';
 import { getBookings } from '../../actions/booking';
 import BookingItem from '../bookings/BookingItem';
 import Fade from 'react-reveal/Fade';
+import Button from 'react-bootstrap/Button';
 
 const Dashboard = ({
   getCurrentProfile,
@@ -28,77 +29,103 @@ const Dashboard = ({
   return (
     <Fragment>
       <Fade>
-        <div className='x'>
-          <div className='z'>
+
+        <div className="Dashboard-Body">
+
+          <div className='Dashboard-Form'>
+
+
+
             <h1 className='dbhead'>User Dashboard</h1>
             <p className='lead'>
               <i className='fas fa-user' /> Welcome {user && user.name}
             </p>
-            <h2>Account information</h2>
-            <p>
-              <i className='fas' /> First Name: {user && user.name}
-            </p>
-            <p>
-              <i className='fas' /> Last Name: {user && user.lastName}
-            </p>
-            <p>
-              <i className='fas' /> Email: {user && user.email}
-            </p>
-            {profile !== null ? (
-              <Fragment>
-                <h2>Profile information</h2>
-                <p>
-                  <i className='profdash' /> DOB: {profile && profile.dob}
-                </p>
-                <p>
-                  <i className='profdash' /> Address:{' '}
-                  {profile && profile.address}
-                </p>
-                <p>
-                  <i className='profdash' /> Phone Number:{' '}
-                  {profile && profile.phoneNumber}
-                </p>
 
-                <DashboardActions />
-              </Fragment>
-            ) : (
-              <Fragment>
-                <p>You have not yet setup a profile, please add some info</p>
-                <Link to='/create-profile' className='btn btn-primary my-1'>
-                  Create Profile
-                </Link>
-              </Fragment>
-            )}
+            <div className="Account-and-Profile">
+
+              <div className="Account-information">
+                <h2>Account information</h2>
+                <p>
+                  <i className='fas' /> First Name: {user && user.name}
+                </p>
+                <p>
+                  <i className='fas' /> Last Name: {user && user.lastName}
+                </p>
+                <p>
+                  <i className='fas' /> Email: {user && user.email}
+                </p>
+              </div>
+
+              {profile !== null ? (
+                <Fragment>
+
+                  <div className="Profile-information">
+                    <h2>Profile information</h2>
+                    <p>
+                      <i className='profdash' /> DOB: {profile && profile.dob}
+                    </p>
+                    <p>
+                      <i className='profdash' /> Address:{' '}
+                      {profile && profile.address}
+                    </p>
+                    <p>
+                      <i className='profdash' /> Phone Number:{' '}
+                      {profile && profile.phoneNumber}
+                    </p>
+
+                    <DashboardActions />
+                  </div>
+
+                </Fragment>
+              ) : (
+                  <Fragment>
+
+                    <div className="Profile-information">
+                      <h2>Profile information</h2>
+                      <p>You have not yet setup a profile, please add some info</p>
+                      <Link to='/create-profile'><Button variant='success'>Create Profile</Button></Link>
+                    </div>
+
+                  </Fragment>
+                )}
+
+            </div>
 
             {bookings !== null ? (
               <Fragment>
-                <h2>Booking information</h2>
-                <p>
-                  <i className='profdash' /> Bookings:{' '}
-                  {bookings && bookings.text}
-                </p>
-                <div className='bookings'>
-                  {bookings.map((booking) => (
-                    <BookingItem key={booking._id} booking={booking} />
-                  ))}
+
+                <div className="Booking-information">
+                  <h2>Booking information</h2>
+                  <p>
+                    <i className='profdash' /> Bookings:{' '}
+                    {bookings && bookings.text}
+                  </p>
+                  <div className='bookings'>
+                    {bookings.map((booking) => (
+                      <BookingItem key={booking._id} booking={booking} />
+                    ))}
+                  </div>
                 </div>
+
               </Fragment>
             ) : (
-              <Fragment>
-                <p>You have not have any Appointments, please set one</p>
-                <Link to='/appointment' className='btn btn-primary my-1'>
-                  Create Appointment
-                </Link>
-              </Fragment>
-            )}
-            <div className='my-2'>
-              <button
-                className='btn btn-danger'
-                onClick={() => deleteAccount()}
-              >
+                <Fragment>
+
+                  <div className="Booking-information">
+                    <p>You have not have any Appointments, please set one</p>
+                    <Link to='/appointment'><Button variant='success'>Create Appointment</Button></Link>
+                  </div>
+
+                </Fragment>
+
+              )}
+
+            <div className='Delete-My-Account'>
+              <button className='btn btn-danger' onClick={() => deleteAccount()}>
                 <i className='fas fa-user-minus' /> Delete My Account
               </button>
             </div>
+
           </div>
         </div>
       </Fade>

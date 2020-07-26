@@ -58,20 +58,10 @@ const Login = ({ login, isAuthenticated }) => {
                   />
                 </Form.Group>
 
-                <Button
-                  name='submit'
-                  variant='dark'
-                  type='submit'
-                  value='Login'
-                >
-                  Submit
-                </Button>
-                <Button variant='success'>
-                  <Link to='/register'>Register</Link>
-                </Button>
-                <Button variant='outline-danger'>
-                  <Link to='/'>Go Back</Link>
-                </Button>
+                <Button variant='dark' name='submit' type='submit' value='Login'>Submit</Button>
+                <Link to='/register'><Button variant='outline-success'>Register</Button></Link>
+                <Link to='/'><Button variant='outline-danger'>Go Back</Button></Link>
+
               </Form>
             </div>
           </Fade>
