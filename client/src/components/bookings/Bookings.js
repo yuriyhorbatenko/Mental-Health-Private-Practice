@@ -14,11 +14,9 @@ const Bookings = ({ getBookings, booking: { bookings, loading } }) => {
     <Spinner />
   ) : (
     <Fragment>
-      <div className='bookings'>
-        {bookings.map((booking) => (
-          <BookingItem key={booking._id} booking={booking} />
-        ))}
-      </div>
+      {bookings.map((booking) => (
+        <BookingItem key={booking._id} booking={booking} />
+      ))}
     </Fragment>
   );
 };
