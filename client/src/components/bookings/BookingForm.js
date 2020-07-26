@@ -5,6 +5,8 @@ import { addBooking } from '../../actions/booking';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Fade from 'react-reveal/Fade';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 const BookingForm = ({ addBooking }) => {
   // const [text, setText] = useState('');
@@ -29,8 +31,9 @@ const BookingForm = ({ addBooking }) => {
       <Fade>
         <div className='Booking-form'>
           <Form onSubmit={onSubmit}>
-            <Form.Group controlId='appointmentDate'>
-              <Form.Label>Appointment Date</Form.Label>
+          <Col sm={10}>
+            <Form.Group as={Row} controlId='appointmentDate'>
+              <Form.Label column sm={10}>Appointment Date</Form.Label>
               <Form.Control
                 name='appointmentDate'
                 value={appointmentDate}
@@ -40,29 +43,34 @@ const BookingForm = ({ addBooking }) => {
                 required
               />
             </Form.Group>
+            </Col>
+            <Col sm={10}>
+              <Form.Group as={Row} controlId='appointmentTime'>
+                <Form.Label column sm={3}>Appointment Time</Form.Label>
+                <Form.Control
+                  name='appointmentTime'
+                  value={appointmentTime}
+                  placeholder='5pm'
+                  onChange={onChange}
+                  type='text'
+                  required
+                />
+              </Form.Group>
+            </Col>
+            <Col sm={10}>
+              <Form.Group as={Row} controlId='text'>
+                <Form.Label column sm={2}>Comments</Form.Label>
+                <Form.Control
+                  name='text'
+                  value={text}
+                  placeholder='Id like to discuss xyz'
+                  onChange={onChange}
+                  type='text'
+                  required
+                />
+              </Form.Group>
+            </Col>
 
-            <Form.Group controlId='appointmentTime'>
-              <Form.Label>Appointment Time</Form.Label>
-              <Form.Control
-                name='appointmentTime'
-                value={appointmentTime}
-                placeholder='5pm'
-                onChange={onChange}
-                type='text'
-                required
-              />
-            </Form.Group>
-            <Form.Group controlId='text'>
-              <Form.Label>Comments</Form.Label>
-              <Form.Control
-                name='text'
-                value={text}
-                placeholder='Id like to discuss xyz'
-                onChange={onChange}
-                type='text'
-                required
-              />
-            </Form.Group>
             <Button name='submit' variant='dark' type='submit' value='Submit'>
               Submit
             </Button>
