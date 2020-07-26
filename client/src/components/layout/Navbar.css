@@ -56,11 +56,12 @@
     float: right!important;
 }
 
-.btn-success {
+.btn-outline-success {
     margin-left: 10px;
 }
 
-a.effect-box:after {
+.effect-box:after{
+    color: white;
     content: '';
     position: absolute;
     display: inline-block;
@@ -80,25 +81,54 @@ a.effect-box:after {
     transform: scale(0,1);
 }
   
-a.effect-box:hover:after {
+.effect-box:hover:after{
     opacity: 1;
     -webkit-transform: scale(1);
     transform: scale(1);
 }
 
-  
-a.effect-shine:hover {
-    -webkit-mask-image: linear-gradient(-75deg, rgb(255, 255, 255) 30%, rgb(255, 255, 255) 50%, rgb(255, 255, 255) 70%);
-    -webkit-mask-size: 200%;
-    animation: shine 2s infinite;
+.effect-box2:after {
+    color: white;
+    content: '';
+    position: relative;
+    left: 0;
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid;
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: scale(0,1);
+    transform: scale(0,1);
 }
   
-@-webkit-keyframes shine {
-    from {
-      -webkit-mask-position: 150%;
-    }
-    
-    to {
-      -webkit-mask-position: -50%;
-    }
+.effect-box2:hover:after  {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
 }
+
+.menu-right {
+    position: relative;
+    margin-top: 0;
+}
+
+.profile-menu {
+    display: flex;
+    justify-content: center;
+}
+
+.dashboard {
+    margin-right: 20px;
+}
+
+.hide-sm {
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.icon-nav {
+    color: white;
+}
+
