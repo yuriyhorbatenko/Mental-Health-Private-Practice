@@ -1,6 +1,5 @@
 import React, { Fragment, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import Spinner from '../layout/Spinner';
 import BookingItem from '../bookings/BookingItem';
@@ -15,9 +14,6 @@ const Booking = ({ getBooking, booking: { booking, loading }, match }) => {
     <Spinner />
   ) : (
     <Fragment>
-      <Link to='/bookings' className='btn'>
-        Back To Bookings
-      </Link>
       <BookingItem booking={booking} showActions={false} />
     </Fragment>
   );
