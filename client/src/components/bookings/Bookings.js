@@ -2,7 +2,6 @@ import React, { Fragment, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import BookingItem from './BookingItem';
-import BookingForm from './BookingForm';
 import { getBookings } from '../../actions/booking';
 
 const Bookings = ({ getBookings, booking: { bookings } }) => {
@@ -12,8 +11,6 @@ const Bookings = ({ getBookings, booking: { bookings } }) => {
 
   return (
     <Fragment>
-      <h1 className='large text-primary'>Bookings</h1>
-      <BookingForm />
       <div className='bookings'>
         {bookings.map((booking) => (
           <BookingItem key={booking._id} booking={booking} />

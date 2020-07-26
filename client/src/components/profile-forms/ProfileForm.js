@@ -15,7 +15,6 @@ const initialState = {
   city: '',
   statee: '',
   zip: '',
-
 };
 
 const ProfileForm = ({
@@ -37,14 +36,7 @@ const ProfileForm = ({
     }
   }, [loading, getCurrentProfile, profile]);
 
-  const {
-    dob,
-    phone,
-    address1,
-    address2,
-    city,
-    statee,
-    zip } = formData;
+  const { dob, phone, address1, address2, city, statee, zip } = formData;
 
   const onChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -60,11 +52,12 @@ const ProfileForm = ({
         <div className='form-group'>
           <h1 className='large text-primary'>Edit Your Profile</h1>
           <p className='lead'>
-            <i className='fas fa-user' /> Add some changes to your profile</p>
+            <i className='fas fa-user' /> Add some changes to your profile
+          </p>
           <small>* = required field</small>
 
           <Form.Row>
-            <Form.Group as={Col} controlId="dob">
+            <Form.Group as={Col} controlId='dob'>
               <Form.Label>DOB</Form.Label>
               <Form.Control
                 type='text'
@@ -75,7 +68,7 @@ const ProfileForm = ({
               />
             </Form.Group>
 
-            <Form.Group as={Col} controlId="phone">
+            <Form.Group as={Col} controlId='phone'>
               <Form.Label>Phone Number</Form.Label>
               <Form.Control
                 type='text'
@@ -87,63 +80,67 @@ const ProfileForm = ({
             </Form.Group>
           </Form.Row>
 
-          <Form.Group controlId="formGridAddress1">
+          <Form.Group controlId='formGridAddress1'>
             <Form.Label>Address</Form.Label>
             <Form.Control
               type='text'
-              placeholder="1234 Main St"
+              placeholder='1234 Main St'
               name='address1'
               value={address1}
-              onChange={onChange} />
+              onChange={onChange}
+            />
           </Form.Group>
 
-          <Form.Group controlId="formGridAddress2">
+          <Form.Group controlId='formGridAddress2'>
             <Form.Label>Address 2</Form.Label>
             <Form.Control
               type='text'
-              placeholder="Apartment, studio, or floor"
+              placeholder='Apartment, studio, or floor'
               name='address2'
               value={address2}
-              onChange={onChange} />
+              onChange={onChange}
+            />
           </Form.Group>
 
           <Form.Row>
-            <Form.Group as={Col} controlId="formGridCity">
+            <Form.Group as={Col} controlId='formGridCity'>
               <Form.Label>City</Form.Label>
               <Form.Control
                 type='text'
-                placeholder="City"
+                placeholder='City'
                 name='city'
                 value={city}
-                onChange={onChange} />
+                onChange={onChange}
+              />
             </Form.Group>
 
-            <Form.Group as={Col} controlId="formGridState">
+            <Form.Group as={Col} controlId='formGridState'>
               <Form.Label>State</Form.Label>
               <Form.Control
                 type='text'
-                placeholder="State"
+                placeholder='State'
                 name='statee'
                 value={statee}
-                onChange={onChange} />
+                onChange={onChange}
+              />
             </Form.Group>
 
-            <Form.Group as={Col} controlId="formGridZip">
+            <Form.Group as={Col} controlId='formGridZip'>
               <Form.Label>Zip</Form.Label>
               <Form.Control
                 type='text'
-                placeholder="Zip"
+                placeholder='Zip'
                 name='zip'
                 value={zip}
-                onChange={onChange} />
+                onChange={onChange}
+              />
             </Form.Group>
           </Form.Row>
-          {/* <input type='submit' className='btn btn-primary my-1' />
-          <Link className='btn btn-light my-1' to='/dashboard'>
-            Go Back
-        </Link> */}
-
-        <Button type="submit">Submit form</Button>
+          <Button type='submit' className='btn btn-primary my-1'>
+            <Link className='btn btn-light my-1' to='/dashboard'>
+              Go Back
+            </Link>
+          </Button>
         </div>
       </form>
     </Fragment>

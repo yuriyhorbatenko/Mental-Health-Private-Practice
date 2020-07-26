@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import DashboardActions from './DashboardActions';
 import { getCurrentProfile, deleteAccount } from '../../actions/profile';
 import { getBookings } from '../../actions/booking';
-import BookingItem from '../bookings/BookingItem';
+import Bookings from '../bookings/Bookings';
 import Fade from 'react-reveal/Fade';
 import Button from 'react-bootstrap/Button';
 
@@ -29,21 +29,15 @@ const Dashboard = ({
   return (
     <Fragment>
       <Fade>
-
-        <div className="Dashboard-Body">
-
+        <div className='Dashboard-Body'>
           <div className='Dashboard-Form'>
-
-
-
             <h1 className='dbhead'>User Dashboard</h1>
             <p className='lead'>
               <i className='fas fa-user' /> Welcome {user && user.name}
             </p>
 
-            <div className="Account-and-Profile">
-
-              <div className="Account-information">
+            <div className='Account-and-Profile'>
+              <div className='Account-information'>
                 <h2>Account information</h2>
                 <p>
                   <i className='fas' /> First Name: {user && user.name}
@@ -52,8 +46,7 @@ const Dashboard = ({
 
               {profile !== null ? (
                 <Fragment>
-
-                  <div className="Profile-information">
+                  <div className='Profile-information'>
                     <h2>Profile information</h2>
                     <p>
                       <i className='profdash' /> DOB: {profile && profile.dob}
@@ -69,57 +62,50 @@ const Dashboard = ({
 
                     <DashboardActions />
                   </div>
-
                 </Fragment>
               ) : (
-                  <Fragment>
-
-                    <div className="Profile-information">
-                      <h2>Profile information</h2>
-                      <p>You have not yet setup a profile, please add some info</p>
-                      <Link to='/create-profile'><Button variant='success'>Create Profile</Button></Link>
-                    </div>
-
-                  </Fragment>
-                )}
-
+                <Fragment>
+                  <div className='Profile-information'>
+                    <h2>Profile information</h2>
+                    <p>
+                      You have not yet setup a profile, please add some info
+                    </p>
+                    <Link to='/create-profile'>
+                      <Button variant='success'>Create Profile</Button>
+                    </Link>
+                  </div>
+                </Fragment>
+              )}
             </div>
 
             {bookings !== null ? (
               <Fragment>
-
-                <div className="Booking-information">
+                <div className='Booking-information'>
                   <h2>Booking information</h2>
-                  <p>
-                    <i className='profdash' /> Bookings:{' '}
-                    {bookings && bookings.text}
-                  </p>
                   <div className='bookings'>
-                    {bookings.map((booking) => (
-                      <BookingItem key={booking._id} booking={booking} />
-                    ))}
+                    <Bookings />
                   </div>
                 </div>
-
               </Fragment>
             ) : (
-                <Fragment>
-
-                  <div className="Booking-information">
-                    <p>You have not have any Appointments, please set one</p>
-                    <Link to='/appointment'><Button variant='success'>Create Appointment</Button></Link>
-                  </div>
-
-                </Fragment>
-
-              )}
+              <Fragment>
+                <div className='Booking-information'>
+                  <p>You have not have any Appointments, please set one</p>
+                  <Link to='/appointment'>
+                    <Button variant='success'>Create Appointment</Button>
+                  </Link>
+                </div>
+              </Fragment>
+            )}
 
             <div className='Delete-My-Account'>
-              <button className='btn btn-danger' onClick={() => deleteAccount()}>
+              <button
+                className='btn btn-danger'
+                onClick={() => deleteAccount()}
+              >
                 <i className='fas fa-user-minus' /> Delete My Account
               </button>
             </div>
-
           </div>
         </div>
       </Fade>

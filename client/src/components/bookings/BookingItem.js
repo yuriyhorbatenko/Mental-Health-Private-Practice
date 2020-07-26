@@ -6,14 +6,15 @@ import { deleteBooking } from '../../actions/booking';
 const BookingItem = ({
   deleteBooking,
   auth,
-  booking: { booking, _id, text, appointmentDate, appointmentTime, user },
+  booking: { _id, text, appointmentDate, appointmentTime, user },
   showActions,
 }) => (
   <Fragment>
-  <div className='booking bg-white p-1 my-1'>
-    <div>
-      {showActions &&  booking !== null &&(
-        <div>
+    <div className='booking bg-white p-1 my-1'>
+      {showActions && !_id ? (
+        <p>no Bookings</p>
+      ) : (
+        <>
           {!auth.loading && user === auth.user._id && (
             <>
               <p className='my-1'>Appointment Date: {appointmentDate}</p>
@@ -28,11 +29,10 @@ const BookingItem = ({
               </button>
             </>
           )}
-      </div>
+        </>
       )}
     </div>
-  </div>
-</Fragment>
+  </Fragment>
 );
 
 BookingItem.defaultProps = {
