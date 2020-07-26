@@ -6,34 +6,35 @@ import { deleteBooking } from '../../actions/booking';
 const BookingItem = ({
   deleteBooking,
   auth,
-  booking: { booking, _id, text, appointmentDate, appointmentTime, user },
+  booking: { _id, text, appointmentDate, appointmentTime, user },
   showActions,
 }) => (
-    <Fragment>
-      <div className='booking bg-white p-1 my-1'>
-        <div>
-          {showActions && booking !== null && (
-            <div>
-              {!auth.loading && user === auth.user._id && (
-                <>
-                  <p className='my-1'>Appointment Date: {appointmentDate}</p>
-                  <p className='my-1'>Appointment Time: {appointmentTime}</p>
-                  <p className='my-1'>Comments: {text}</p>
-                  <button
-                    onClick={() => deleteBooking(_id)}
-                    type='button'
-                    className='btn btn-danger'
-                  >
-                    <i className='fas fa-times' />
-                  </button>
-                </>
-              )}
-            </div>
+
+  <Fragment>
+    <div className='booking bg-white p-1 my-1'>
+      {showActions && !_id ? (
+        <p>no Bookings</p>
+      ) : (
+        <>
+          {!auth.loading && user === auth.user._id && (
+            <>
+              <p className='my-1'>Appointment Date: {appointmentDate}</p>
+              <p className='my-1'>Appointment Time: {appointmentTime}</p>
+              <p className='my-1'>Comments: {text}</p>
+              <button
+                onClick={() => deleteBooking(_id)}
+                type='button'
+                className='btn btn-danger'
+              >
+                <i className='fas fa-times' />
+              </button>
+            </>
           )}
-        </div>
-      </div>
-    </Fragment>
-  );
+        </>
+      )}
+    </div>
+  </Fragment>
+);
 
 BookingItem.defaultProps = {
   showActions: true,

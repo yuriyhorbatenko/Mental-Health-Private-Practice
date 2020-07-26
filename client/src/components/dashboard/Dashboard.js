@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import DashboardActions from './DashboardActions';
 import { getCurrentProfile, deleteAccount } from '../../actions/profile';
 import { getBookings } from '../../actions/booking';
-import BookingItem from '../bookings/BookingItem';
+import Bookings from '../bookings/Bookings';
 import Fade from 'react-reveal/Fade';
 import Button from 'react-bootstrap/Button';
 
@@ -29,15 +29,14 @@ const Dashboard = ({
   return (
     <Fragment>
       <Fade>
-
-        <div className="Dashboard-Body">
-
+        <div className='Dashboard-Body'>
           <div className='Dashboard-Form'>
 
             <h1 className='dbhead'>User Dashboard</h1>
             <p className='lead'>
               <i className='fas fa-user' /> Welcome {user && user.name}
             </p>
+
 
             <div className="Account-and-Profile">
 
@@ -57,6 +56,7 @@ const Dashboard = ({
 
               {profile !== null ? (
                 <Fragment>
+
 
                   <div className="Profile-information">
                     <h2 className="dbHeader">Profile information</h2>
@@ -81,20 +81,20 @@ const Dashboard = ({
 
                     <DashboardActions />
                   </div>
-
                 </Fragment>
               ) : (
-                  <Fragment>
-
-                    <div className="Profile-information">
-                      <h2>Profile information</h2>
-                      <p>You have not yet setup a profile, please add some info</p>
-                      <Link to='/create-profile'><Button variant='success'>Create Profile</Button></Link>
-                    </div>
-
-                  </Fragment>
-                )}
-
+                <Fragment>
+                  <div className='Profile-information'>
+                    <h2>Profile information</h2>
+                    <p>
+                      You have not yet setup a profile, please add some info
+                    </p>
+                    <Link to='/create-profile'>
+                      <Button variant='success'>Create Profile</Button>
+                    </Link>
+                  </div>
+                </Fragment>
+              )}
             </div>
 
             {bookings !== null ? (
@@ -105,27 +105,22 @@ const Dashboard = ({
                   <p>
                     <i className='profdash' />Appointment Date: <span className="dbInfo">{bookings && bookings.appointmentDate}</span>
                   </p>
+
                   <div className='bookings'>
-                    {bookings.map((booking) => (
-                      <BookingItem key={booking._id} booking={booking} />
-                    ))}
+                    <Bookings />
                   </div>
                 </div>
-
               </Fragment>
             ) : (
-                <Fragment>
-
-                  <div className="Booking-information">
-                    <p>You have not have any Appointments, please set one</p>
-                    <Link to='/appointment'><Button variant='success'>Create Appointment</Button></Link>
-                  </div>
-
-                </Fragment>
-
-              )}
-
-
+              <Fragment>
+                <div className='Booking-information'>
+                  <p>You have not have any Appointments, please set one</p>
+                  <Link to='/appointment'>
+                    <Button variant='success'>Create Appointment</Button>
+                  </Link>
+                </div>
+              </Fragment>
+            )}
 
           </div>
         </div>
