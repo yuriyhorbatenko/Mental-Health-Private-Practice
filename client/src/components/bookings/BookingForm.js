@@ -31,35 +31,41 @@ const BookingForm = ({ addBooking }) => {
       <Fade>
         <div className='Booking-form'>
           <Form onSubmit={onSubmit}>
-          <Col sm={10}>
-            <Form.Group as={Row} controlId='appointmentDate'>
-              <Form.Label column sm={10}>Appointment Date</Form.Label>
-              <Form.Control
-                name='appointmentDate'
-                value={appointmentDate}
-                placeholder='07/25/2020'
-                onChange={onChange}
-                type='text'
-                required
-              />
-            </Form.Group>
+            <Col sm={10}>
+              <Form.Group as={Row} controlId='appointmentDate'>
+                <Form.Label column sm={10}>
+                  Appointment Date
+                </Form.Label>
+                <Form.Control
+                  name='appointmentDate'
+                  value={appointmentDate}
+                  placeholder='07/25/2020'
+                  onChange={onChange}
+                  type='Date'
+                  required
+                />
+              </Form.Group>
             </Col>
             <Col sm={10}>
               <Form.Group as={Row} controlId='appointmentTime'>
-                <Form.Label column sm={3}>Appointment Time</Form.Label>
+                <Form.Label column sm={3}>
+                  Appointment Time
+                </Form.Label>
                 <Form.Control
                   name='appointmentTime'
                   value={appointmentTime}
                   placeholder='5pm'
                   onChange={onChange}
-                  type='text'
+                  type='Time'
                   required
                 />
               </Form.Group>
             </Col>
             <Col sm={10}>
               <Form.Group as={Row} controlId='text'>
-                <Form.Label column sm={2}>Comments</Form.Label>
+                <Form.Label column sm={2}>
+                  Comments
+                </Form.Label>
                 <Form.Control
                   name='text'
                   value={text}
