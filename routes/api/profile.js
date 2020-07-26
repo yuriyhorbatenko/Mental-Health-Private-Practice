@@ -37,8 +37,11 @@ router.post(
     auth,
     [
       check('dob', 'DOB is required').not().isEmpty(),
-      check('address', 'Address is required').not().isEmpty(),
-      check('phoneNumber', 'PhoneNumber is required').not().isEmpty(),
+      check('phone', 'PhoneNumber is required').not().isEmpty(),
+      check('address1', 'Address1 is required').not().isEmpty(),
+      check('city', 'City is required').not().isEmpty(),
+      check('statee', 'State is required').not().isEmpty(),
+      check('zip', 'Zip is required').not().isEmpty()
     ],
   ],
   async (req, res) => {
@@ -46,13 +49,24 @@ router.post(
     if (!errors.isEmpty()) {
       return res.status(400).json({ errors: errors.array() });
     }
-    const { dob, address, phoneNumber } = req.body;
+    const {     
+      dob,
+      phone,
+      address1,
+      address2,
+      city,
+      statee,
+      zip  } = req.body;
 
     const profileFields = {
       user: req.user.id,
       dob,
-      address,
-      phoneNumber,
+      phone,
+      address1,
+      address2,
+      city,
+      statee,
+      zip 
     };
 
     try {

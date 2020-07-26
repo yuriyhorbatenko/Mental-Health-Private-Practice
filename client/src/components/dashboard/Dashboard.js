@@ -52,11 +52,11 @@ const Dashboard = ({
                 </p>
                 <p>
                   <i className='profdash' /> Address:{' '}
-                  {profile && profile.address}
+                  {profile && profile.address1}
                 </p>
                 <p>
                   <i className='profdash' /> Phone Number:{' '}
-                  {profile && profile.phoneNumber}
+                  {profile && profile.number}
                 </p>
 
                 <DashboardActions />
