@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { deleteBooking } from '../../actions/booking';
 import Button from 'react-bootstrap/Button';
 import Moment from 'react-moment';
+import moment from 'moment';
 import 'moment-timezone';
 
 const BookingItem = ({
@@ -28,7 +29,9 @@ const BookingItem = ({
               <i className='profdash' />
               Appointment Date:{' '}
               <span className='dbInfo'>
-                <Moment format='MMM-D-YYYY'>{appointmentDate}</Moment>
+                <Moment format='MMM-D-YYYY'>
+                  {moment.utc(appointmentDate)}
+                </Moment>
               </span>
             </p>
 
