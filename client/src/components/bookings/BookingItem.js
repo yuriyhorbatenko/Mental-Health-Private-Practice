@@ -8,7 +8,7 @@ import Moment from 'react-moment';
 const BookingItem = ({
   deleteBooking,
   auth,
-  booking: { booking, _id, text, appointmentDate, appointmentTime, user },
+  booking: { booking, _id, text, appointmentDate, appointmentTime, appointmentDuration, user },
   showActions,
 }) => (
 
@@ -23,6 +23,10 @@ const BookingItem = ({
 
               <p>
                 <i className='profdash' />Appointment Date: <span className="dbInfo">{appointmentTime}</span>
+              </p>
+
+              <p>
+                <i className='profdash' />Appointment Duration: <span className="dbInfo">{appointmentDuration}</span>
               </p>
 
               <p>
