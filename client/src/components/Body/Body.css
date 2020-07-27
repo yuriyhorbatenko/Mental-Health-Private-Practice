@@ -232,10 +232,10 @@ a.effect-underline:hover {
 .Dashboard-Body{
     background-image: url(../../img/img0.jpg);
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: repeat-y;
     display: flex;
     flex-direction: column;
-    height: 93vh;
+    min-height: 93vh;
 }
 
 .Dashboard-Form{
@@ -295,6 +295,11 @@ a.effect-underline:hover {
 
 .dash-button {
     float: left;
+}
+
+#dash-button2 {
+    float: none!important;
+    margin-bottom: 30px;
 }
 
 .dbHeader {
