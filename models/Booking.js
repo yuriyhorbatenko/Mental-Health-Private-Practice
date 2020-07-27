@@ -18,6 +18,10 @@ const bookingSchema = new Schema({
     type: String,
     required: true,
   },
+  appointmentDuration: {
+    type: String,
+    required: true,
+  },
   text: {
     type: String,
     required: true,

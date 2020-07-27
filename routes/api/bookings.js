@@ -17,6 +17,7 @@ router.post(
     [
       check('appointmentDate', 'Appointment Date is Required').not().isEmpty(),
       check('appointmentTime', 'Appointment Time is Required').not().isEmpty(),
+      check('appointmentDuration', 'Appointment Duration is Required').not().isEmpty(),
       check('text', 'Text is required').not().isEmpty(),
     ],
   ],
@@ -32,6 +33,7 @@ router.post(
       const newBooking = new Booking({
         appointmentDate: req.body.appointmentDate,
         appointmentTime: req.body.appointmentTime,
+        appointmentDuration: req.body.appointmentDuration,
         text: req.body.text,
         name: user.name,
         user: req.user.id,
