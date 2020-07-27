@@ -78,6 +78,7 @@ const BookingForm = ({ addBooking }) => {
             <Button name='submit' variant='dark' type='submit' value='Submit'>
               Submit
             </Button>
+
           </Form>
         </div>
       </Fade>
