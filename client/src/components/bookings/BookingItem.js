@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import { deleteBooking } from '../../actions/booking';
 import Button from 'react-bootstrap/Button';
 import Moment from 'react-moment';
-import Time from 'react-time-format'
 import 'moment-timezone';
 
 const BookingItem = ({
