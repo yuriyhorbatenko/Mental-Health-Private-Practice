@@ -58,9 +58,9 @@ const ProfileForm = ({
 
           <Form.Row>
             <Form.Group as={Col} controlId='dob'>
-              <Form.Label>DOB</Form.Label>
+              <Form.Label>Date Of Birth</Form.Label>
               <Form.Control
-                type='text'
+                type='date'
                 placeholder='01/01/2000'
                 name='dob'
                 value={dob}
@@ -72,7 +72,7 @@ const ProfileForm = ({
               <Form.Label>Phone Number</Form.Label>
               <Form.Control
                 type='text'
-                placeholder='215-215-2115'
+                placeholder='123456789'
                 name='phone'
                 value={phone}
                 onChange={onChange}

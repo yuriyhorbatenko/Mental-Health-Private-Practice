@@ -5,8 +5,6 @@ import { deleteBooking } from '../../actions/booking';
 import Button from 'react-bootstrap/Button';
 import Moment from 'react-moment';
 
-
-
 const BookingItem = ({
   deleteBooking,
   auth,
@@ -19,7 +17,6 @@ const BookingItem = ({
         <Fragment>
           {!auth.loading && user === auth.user._id && (
             <>
-
               <p>
                 <i className='profdash' />Appointment Date: <span className="dbInfo">{<Moment format="YYYY/MM/DD">{appointmentDate}</Moment>}</span>
               </p>
@@ -38,8 +35,6 @@ const BookingItem = ({
       )}
     </>
   );
-
-
 
 BookingItem.defaultProps = {
   showActions: true
