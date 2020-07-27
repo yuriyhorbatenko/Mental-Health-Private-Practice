@@ -161,7 +161,7 @@ h1 {
 }
 
 .Links {
-    padding: 100px;
+    padding: 70px;
     padding-top: 120px;
     width: 900px;
     margin: 0 auto 0 auto;
@@ -300,6 +300,12 @@ a.effect-underline:hover {
 #dash-button2 {
     float: none!important;
     margin-bottom: 30px;
+}
+
+#dash-button3 {
+    float: none!important;
+    margin-right: 7px;
+    margin-left: 7px;
 }
 
 .dbHeader {
