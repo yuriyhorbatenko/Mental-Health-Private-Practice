@@ -9,6 +9,9 @@ ___
 ### Mental Health Private Practice
 
 **We decided to make a page for mental health services. From the beginning of our project we knew we have to create easy to navigate page with unique feature which make your life easier. You just few simple clicks away from your scheduled appointment.**
+
+___
+
 ![](client/public/assets/img/screen_home.jpg)
 
 ### About Me
