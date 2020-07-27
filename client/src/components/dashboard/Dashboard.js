@@ -88,7 +88,7 @@ const Dashboard = ({
                     <Fragment>
 
                       <div className='Profile-information'>
-                        <h2>Profile information</h2>
+                        <h2 className="dbHeader">Profile information</h2>
                         <p>
                           You have not yet setup a profile, please add some info
                       </p>

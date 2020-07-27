@@ -1,61 +1,73 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Group Project 3
 
-## About Our App
+### Full Stack application
 
-### Every Small Business Needs Help
+![](client/public/assets/img/mern.jpg)
 
+___
 
-### `npm test`
+### Mental Health Private Practice
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**We decided to make a page for mental health services. From the beginning of our project we knew we have to create easy to navigate page with unique feature which make your life easier. You just few simple clicks away from your scheduled appointment.**
+![](client/public/assets/img/screen_home.jpg)
 
-### `npm run build`
+### About Me
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![](client/public/assets/img/screen_about.jpg)
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+### Services
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![](client/public/assets/img/screen_services.jpg)
 
-### `npm run eject`
+### Helpful Links
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+![](client/public/assets/img/screen_links.jpg)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Register
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+![](client/public/assets/img/screen_register.jpg)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Login
 
-## Learn More
+![](client/public/assets/img/screen_login.jpg)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Add/Edit Account
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![](client/public/assets/img/screen_edit.jpg)
 
-### Code Splitting
+### Schedule Appointment
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+![](client/public/assets/img/screen_schedule.jpg)
 
-### Analyzing the Bundle Size
+### Dashboard
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+![](client/public/assets/img/screen_dashboard.jpg)
 
-### Making a Progressive Web App
+___
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+### Project Contributors:
 
-### Advanced Configuration
+**[Evan Green](https://github.com/ThePalad1n)**
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+**[Jay Rodriguez](https://github.com/DntworryJayshere)**
 
-### Deployment
+**[Mike Gruschow](https://github.com/MikeGruschow)**
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+**[Yuriy Horbatenko](https://github.com/yuriyhorbatenko)**
 
-### `npm run build` fails to minify
+___
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+### Technologies Used
+
+* MERN - MongoDB, Express.js, React.js, Node.js
+* React Redux
+* Mongo Atlas
+* Postman
+* Javascript
+* jQuery
+* CSS
+* HTML
+
+___
+
+### 07-27-2020
