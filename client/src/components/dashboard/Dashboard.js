@@ -56,6 +56,7 @@ const Dashboard = ({
                   <Fragment>
 
                     <div className="Profile-information">
+
                       <h2 className="dbHeader">Profile information</h2>
                       <p>
                         <i className='profdash' />Phone Number: <span className="dbInfo">{profile && profile.phone}</span>

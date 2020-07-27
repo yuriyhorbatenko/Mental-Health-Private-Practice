@@ -12,29 +12,29 @@ const BookingItem = ({
   showActions,
 }) => (
 
-  <>
-    {showActions && (
-      <Fragment>
-        {!auth.loading && user === auth.user._id && (
-          <>
-          <p>
-            <i className='profdash' />Appointment Date: <span className="dbInfo">{appointmentDate}</span>
-          </p>
+    <>
+      {showActions && (
+        <Fragment>
+          {!auth.loading && user === auth.user._id && (
+            <>
+              <p>
+                <i className='profdash' />Appointment Date: <span className="dbInfo">{appointmentDate}</span>
+              </p>
 
-          <p>
-            <i className='profdash' />Appointment Date: <span className="dbInfo">{appointmentTime}</span>
-          </p>
+              <p>
+                <i className='profdash' />Appointment Time: <span className="dbInfo">{appointmentTime}</span>
+              </p>
 
-          <p>
-            <i className='profdash' />Appointment Date: <span className="dbInfo">{text}</span>
-          </p>
-          <Button variant='outline-danger' onClick={() => deleteBooking(_id)}><i className='fas fa-trash' /> Delete Booking </Button>
-        </>
-        )}
-      </Fragment>
-    )}
-  </>
-);
+              <p>
+                <i className='profdash' />Comment: <span className="dbInfo">{text}</span>
+              </p>
+              <Button variant='outline-danger' id="dash-button2" onClick={() => deleteBooking(_id)}><i className='fas fa-trash' /> Delete Booking </Button>
+            </>
+          )}
+        </Fragment>
+      )}
+    </>
+  );
 
 BookingItem.defaultProps = {
   showActions: true,
