@@ -6,11 +6,36 @@ import { logout } from '../../actions/auth';
 import './Navbar.css';
 
 const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
-
   const authLinks = (
     <>
-      <div className="profile-menu">
+      <div className='menu'>
+        <div className='menu'>
+          <ul>
+            <li>
+              <Link className='effect-box' to='/about'>
+                About Me
+              </Link>
+            </li>
+            <li>
+              <Link className='effect-box' to='/services'>
+                Services
+              </Link>
+            </li>
+            <li>
+              <Link className='effect-box' to='/appointment'>
+                Schedule Appointment
+              </Link>
+            </li>
+            <li>
+              <Link className='effect-box' to='/links'>
+                Helpful Links
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </div>
 
+      <div className='profile-menu'>
         <div className='dashboard'>
           <Link to='/dashboard' className='effect-box2'>
             <i className='icon-nav fas fa-user' />{' '}
@@ -24,16 +49,43 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
             <span className='hide-sm underline-opening'>Logout</span>
           </a>
         </div>
-
       </div>
     </>
   );
 
   const guestLinks = (
     <>
+      <div className='menu'>
+        <div className='menu'>
+          <ul>
+            <li>
+              <Link className='effect-box' to='/about'>
+                About Me
+              </Link>
+            </li>
+            <li>
+              <Link className='effect-box' to='/services'>
+                Services
+              </Link>
+            </li>
+            <li>
+              <Link className='effect-box' to='/login'>
+                Schedule Appointment
+              </Link>
+            </li>
+            <li>
+              <Link className='effect-box' to='/links'>
+                Helpful Links
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </div>
+
       <div className='login'>
         <Link to='/login'>
-          <i className='login-link' /> <span className='hide-sm effect-box2'>Login</span>
+          <i className='login-link' />{' '}
+          <span className='hide-sm effect-box2'>Login</span>
         </Link>
       </div>
     </>
@@ -44,11 +96,13 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
       <nav className='navbar'>
         <div className='name'>
           <Link to='/'>
-            <div id='home-link' className='name-link'>Ilona Menshova, LPC</div>
+            <div id='home-link' className='name-link'>
+              Ilona Menshova, LPC
+            </div>
           </Link>
         </div>
 
-        <div className='menu'>
+        {/* <div className='menu'>
           <div className='menu'>
             <ul>
               <li>
@@ -73,7 +127,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
               </li>
             </ul>
           </div>
-        </div>
+        </div> */}
 
         {!loading && (
           <Fragment>{isAuthenticated ? authLinks : guestLinks}</Fragment>
