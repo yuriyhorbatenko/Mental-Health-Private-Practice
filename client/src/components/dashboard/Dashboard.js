@@ -8,7 +8,6 @@ import Bookings from '../bookings/Bookings';
 import Fade from 'react-reveal/Fade';
 import Button from 'react-bootstrap/Button';
 import Moment from 'react-moment';
-import Time from 'react-time-format'
 import 'moment-timezone';
 
 const Dashboard = ({
