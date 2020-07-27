@@ -18,7 +18,7 @@ const BookingItem = ({
           {!auth.loading && user === auth.user._id && (
             <>
               <p>
-                <i className='profdash' />Appointment Date: <span className="dbInfo">{<Moment format="YYYY/MM/DD">{appointmentDate}</Moment>}</span>
+                <i className='profdash' />Appointment Date: <span className="dbInfo">{<Moment format="MM/DD/YYYY">{appointmentDate}</Moment>}</span>
               </p>
 
               <p>
@@ -28,7 +28,8 @@ const BookingItem = ({
               <p>
                 <i className='profdash' />Appointment Date: <span className="dbInfo">{text}</span>
               </p>
-              <Button variant='outline-danger' id = "dash-button2" onClick={() => deleteBooking(_id)}><i className='fas fa-trash' /> Delete Booking </Button>
+  
+              <Button variant='outline-danger' id="dash-button2" onClick={() => deleteBooking(_id)}><i className='fas fa-trash' /> Delete Booking </Button>
             </>
           )}
         </Fragment>

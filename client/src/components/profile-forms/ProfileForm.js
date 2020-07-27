@@ -6,6 +6,7 @@ import { createProfile, getCurrentProfile } from '../../actions/profile';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+import Fade from 'react-reveal/Fade';
 
 const initialState = {
   dob: '',
@@ -48,102 +49,122 @@ const ProfileForm = ({
 
   return (
     <Fragment>
-      <form className='form' onSubmit={onSubmit}>
-        <div className='form-group'>
-          <h1 className='large text-primary'>Edit Your Profile</h1>
-          <p className='lead'>
-            <i className='fas fa-user' /> Add some changes to your profile
-          </p>
-          <small>* = required field</small>
+      <Fade>
 
-          <Form.Row>
-            <Form.Group as={Col} controlId='dob'>
-              <Form.Label>Date Of Birth</Form.Label>
-              <Form.Control
-                type='date'
-                placeholder='01/01/2000'
-                name='dob'
-                value={dob}
-                onChange={onChange}
-              />
-            </Form.Group>
+        <div className='Dashboard-Body'>
+          <Fade top>
 
-            <Form.Group as={Col} controlId='phone'>
-              <Form.Label>Phone Number</Form.Label>
-              <Form.Control
-                type='text'
-                placeholder='123456789'
-                name='phone'
-                value={phone}
-                onChange={onChange}
-              />
-            </Form.Group>
-          </Form.Row>
+            <div className='Dashboard-Form'>
+              <Form className='form' onSubmit={onSubmit}>
 
-          <Form.Group controlId='formGridAddress1'>
-            <Form.Label>Address</Form.Label>
-            <Form.Control
-              type='text'
-              placeholder='1234 Main St'
-              name='address1'
-              value={address1}
-              onChange={onChange}
-            />
-          </Form.Group>
+                <div className='form-group'>
+                  <h2 className="dbHeaderRight">Edit Your Profile</h2>
+                  <p className='Welcome-User'>
+                    <i className='fas fa-user' /> Add some changes to your profile
+                  </p>
+                  <small>* = required field</small>
 
-          <Form.Group controlId='formGridAddress2'>
-            <Form.Label>Address 2</Form.Label>
-            <Form.Control
-              type='text'
-              placeholder='Apartment, studio, or floor'
-              name='address2'
-              value={address2}
-              onChange={onChange}
-            />
-          </Form.Group>
+                  <Form.Row>
+                    <Form.Group as={Col} controlId='dob'>
+                      <Form.Label>Date Of Birth*</Form.Label>
+                      <Form.Control
+                        type='date'
+                        placeholder='01/01/2000'
+                        name='dob'
+                        value={dob}
+                        onChange={onChange}
+                        required
+                      />
+                    </Form.Group>
 
-          <Form.Row>
-            <Form.Group as={Col} controlId='formGridCity'>
-              <Form.Label>City</Form.Label>
-              <Form.Control
-                type='text'
-                placeholder='City'
-                name='city'
-                value={city}
-                onChange={onChange}
-              />
-            </Form.Group>
+                    <Form.Group as={Col} controlId='phone'>
+                      <Form.Label>Phone Number*</Form.Label>
+                      <Form.Control
+                        type='text'
+                        placeholder='123456789'
+                        name='phone'
+                        value={phone}
+                        onChange={onChange}
+                        required
+                      />
+                    </Form.Group>
+                  </Form.Row>
 
-            <Form.Group as={Col} controlId='formGridState'>
-              <Form.Label>State</Form.Label>
-              <Form.Control
-                type='text'
-                placeholder='State'
-                name='statee'
-                value={statee}
-                onChange={onChange}
-              />
-            </Form.Group>
+                  <Form.Group controlId='formGridAddress1'>
+                    <Form.Label>Address*</Form.Label>
+                    <Form.Control
+                      type='text'
+                      placeholder='1234 Main St'
+                      name='address1'
+                      value={address1}
+                      onChange={onChange}
+                      required
+                    />
+                  </Form.Group>
 
-            <Form.Group as={Col} controlId='formGridZip'>
-              <Form.Label>Zip</Form.Label>
-              <Form.Control
-                type='text'
-                placeholder='Zip'
-                name='zip'
-                value={zip}
-                onChange={onChange}
-              />
-            </Form.Group>
-          </Form.Row>
-          <Button type='submit' className='btn btn-primary my-1'>
-            <Link className='btn btn-light my-1' to='/dashboard'>
-              Go Back
-            </Link>
-          </Button>
+                  <Form.Group controlId='formGridAddress2'>
+                    <Form.Label>Address 2</Form.Label>
+                    <Form.Control
+                      type='text'
+                      placeholder='Apartment, studio, or floor'
+                      name='address2'
+                      value={address2}
+                      onChange={onChange}
+                    />
+                  </Form.Group>
+
+                  <Form.Row>
+                    <Form.Group as={Col} controlId='formGridCity'>
+                      <Form.Label>City*</Form.Label>
+                      <Form.Control
+                        type='text'
+                        placeholder='City'
+                        name='city'
+                        value={city}
+                        onChange={onChange}
+                        required
+                      />
+                    </Form.Group>
+
+                    <Form.Group as={Col} controlId='formGridState'>
+                      <Form.Label>State*</Form.Label>
+                      <Form.Control
+                        type='text'
+                        placeholder='State'
+                        name='statee'
+                        value={statee}
+                        onChange={onChange}
+                        required
+                      />
+                    </Form.Group>
+
+                    <Form.Group as={Col} controlId='formGridZip'>
+                      <Form.Label>Zip*</Form.Label>
+                      <Form.Control
+                        type='text'
+                        placeholder='Zip'
+                        name='zip'
+                        value={zip}
+                        onChange={onChange}
+                        required
+                      />
+                    </Form.Group>
+                  </Form.Row>
+
+                  <Button id="dash-button3" type='submit' className='btn btn-success'>Submit</Button>
+                  <Link to='/dashboard'><Button id="dash-button3" variant='outline-danger'>Go Back</Button></Link>
+
+
+
+                </div>
+              </Form>
+            </div>
+          </Fade>
         </div>
-      </form>
+
+      </Fade>
     </Fragment>
+
   );
 };
 

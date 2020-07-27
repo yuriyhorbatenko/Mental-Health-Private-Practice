@@ -63,7 +63,7 @@ const Dashboard = ({
                         <i className='profdash' />Phone Number: <span className="dbInfo">{profile && profile.phone}</span>
                       </p>
                       <p>
-                        <i className='profdash' />Date Of Birth: <span className="dbInfo">{profile && <Moment format="YYYY/MM/DD">{profile.dob}</Moment>}</span>
+                        <i className='profdash' />Date Of Birth: <span className="dbInfo">{profile && <Moment format="MM/DD/YYYY">{profile.dob}</Moment>}</span>
                       </p>
                       <p>
                         <i className='profdash' />Address: <span className="dbInfo">{profile && profile.address1} {profile && profile.address2}</span>

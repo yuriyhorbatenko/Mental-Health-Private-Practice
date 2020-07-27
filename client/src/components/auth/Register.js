@@ -103,12 +103,10 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
                   />
                 </Form.Group>
 
-                <Button name='submit' variant='dark' type='submit'>
-                  Submit
-                </Button>
-                <Button variant='outline-danger'>
-                  <Link to='/'>Go Back</Link>
-                </Button>
+                <Button name='submit' variant='dark' type='submit'>Submit</Button>
+
+                <Link to='/'><Button variant='outline-danger'>Go Back</Button></Link>
+
               </Form>
             </div>
           </Fade>
