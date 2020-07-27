@@ -10,7 +10,7 @@ function Footer() {
         <a
           target='_blank'
           rel='noopener noreferrer'
-          href='https://github.com/yuriyhorbatenko/Project_-3'
+          href='https://github.com/yuriyhorbatenko/Project_-3#readme'
         >
           <img alt='github' src={github} className='github' />
         </a>

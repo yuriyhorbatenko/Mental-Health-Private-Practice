@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 import { deleteBooking } from '../../actions/booking';
 import Button from 'react-bootstrap/Button';
 import Moment from 'react-moment';
+import Time from 'react-time-format'
+import 'moment-timezone';
 
 const BookingItem = ({
   deleteBooking,
@@ -18,11 +20,11 @@ const BookingItem = ({
           {!auth.loading && user === auth.user._id && (
             <>
               <p>
-                <i className='profdash' />Appointment Date: <span className="dbInfo">{<Moment format="MM/DD/YYYY">{appointmentDate}</Moment>}</span>
+                <i className='profdash' />Appointment Date: <span className="dbInfo"><Moment format="MMM-D-YYYY">{appointmentDate}</Moment></span>
               </p>
 
               <p>
-                <i className='profdash' />Appointment Date: <span className="dbInfo">{appointmentTime}</span>
+                <i className='profdash' />Appointment Time: <span className="dbInfo">{appointmentTime}</span>
               </p>
 
               <p>
@@ -30,9 +32,9 @@ const BookingItem = ({
               </p>
 
               <p>
-                <i className='profdash' />Appointment Date: <span className="dbInfo">{text}</span>
+                <i className='profdash' />Comment: <span className="dbInfo">{text}</span>
               </p>
-  
+
               <Button variant='outline-danger' id="dash-button2" onClick={() => deleteBooking(_id)}><i className='fas fa-trash' /> Delete Booking </Button>
             </>
           )}

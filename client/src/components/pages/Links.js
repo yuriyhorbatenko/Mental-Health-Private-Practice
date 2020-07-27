@@ -16,6 +16,7 @@ class Links extends Component {
           <div className='Links-body'>
             <Zoom cascade>
               <div className='Links'>
+
                 <h3 className='topic-links'>
                   <a
                     className='effect-underline'
@@ -27,6 +28,7 @@ class Links extends Component {
                   </a>
                   <span className='topic-phone'>(800)-273-8255</span>
                 </h3>
+
                 <h3 className='topic-links'>
                   <a
                     className='effect-underline'
@@ -38,6 +40,19 @@ class Links extends Component {
                   </a>
                   <span className='topic-phone'>(215)-686-4420</span>
                 </h3>
+
+                <h3 className='topic-links'>
+                  <a
+                    className='effect-underline'
+                    href='https://www.nami.org/'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                  >
+                    National Alliance on Mental Illness:
+                  </a>
+                  <span className='topic-phone'>(800)-950-6264</span>
+                </h3>
+
                 <h3 className='topic-links'>
                   <a
                     className='effect-underline'
@@ -49,6 +64,7 @@ class Links extends Component {
                   </a>
                   <span className='topic-phone'>(215)-685-6440</span>
                 </h3>
+
                 <h3 className='topic-links'>
                   <a
                     className='effect-underline'
@@ -60,6 +76,7 @@ class Links extends Component {
                   </a>
                   <span className='topic-phone'>(844)-793-9429</span>
                 </h3>
+
                 <h3 className='topic-links'>
                   <a
                     className='effect-underline'
@@ -71,6 +88,7 @@ class Links extends Component {
                   </a>
                   <span className='topic-phone'>(215)-590-1000</span>
                 </h3>
+
                 <h3 className='topic-links'>
                   <a
                     className='effect-underline'
