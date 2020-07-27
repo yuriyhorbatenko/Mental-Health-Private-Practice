@@ -1,9 +1,9 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { deleteBooking } from '../../actions/booking';
 import Button from 'react-bootstrap/Button';
+import Moment from 'react-moment';
 
 const BookingItem = ({
   deleteBooking,
@@ -18,17 +18,17 @@ const BookingItem = ({
           {!auth.loading && user === auth.user._id && (
             <>
               <p>
-                <i className='profdash' />Appointment Date: <span className="dbInfo">{appointmentDate}</span>
+                <i className='profdash' />Appointment Date: <span className="dbInfo">{<Moment format="YYYY/MM/DD">{appointmentDate}</Moment>}</span>
               </p>
 
               <p>
-                <i className='profdash' />Appointment Time: <span className="dbInfo">{appointmentTime}</span>
+                <i className='profdash' />Appointment Date: <span className="dbInfo">{appointmentTime}</span>
               </p>
 
               <p>
-                <i className='profdash' />Comment: <span className="dbInfo">{text}</span>
+                <i className='profdash' />Appointment Date: <span className="dbInfo">{text}</span>
               </p>
-              <Button variant='outline-danger' id="dash-button2" onClick={() => deleteBooking(_id)}><i className='fas fa-trash' /> Delete Booking </Button>
+              <Button variant='outline-danger' onClick={() => deleteBooking(_id)}><i className='fas fa-trash' /> Delete Booking </Button>
             </>
           )}
         </Fragment>
@@ -37,7 +37,7 @@ const BookingItem = ({
   );
 
 BookingItem.defaultProps = {
-  showActions: true,
+  showActions: true
 };
 
 BookingItem.propTypes = {
@@ -46,6 +46,7 @@ BookingItem.propTypes = {
   deleteBooking: PropTypes.func.isRequired,
   showActions: PropTypes.bool,
 };
+
 
 const mapStateToProps = (state) => ({
   auth: state.auth,
