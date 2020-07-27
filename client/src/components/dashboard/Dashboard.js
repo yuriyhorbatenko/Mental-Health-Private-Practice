@@ -7,6 +7,7 @@ import { getBookings } from '../../actions/booking';
 import Bookings from '../bookings/Bookings';
 import Fade from 'react-reveal/Fade';
 import Button from 'react-bootstrap/Button';
+import Moment from 'react-moment';
 
 const Dashboard = ({
   getCurrentProfile,
@@ -61,7 +62,7 @@ const Dashboard = ({
                         <i className='profdash' />Phone Number: <span className="dbInfo">{profile && profile.phone}</span>
                       </p>
                       <p>
-                        <i className='profdash' />Date Of Birth: <span className="dbInfo">{profile && profile.dob}</span>
+                        <i className='profdash' />Date Of Birth: <span className="dbInfo">{profile && <Moment format="YYYY/MM/DD">{profile.dob}</Moment>}</span>
                       </p>
                       <p>
                         <i className='profdash' />Address: <span className="dbInfo">{profile && profile.address1} {profile && profile.address2}</span>
