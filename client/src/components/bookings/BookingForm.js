@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { addBooking } from '../../actions/booking';
 import Form from 'react-bootstrap/Form';
@@ -34,7 +34,8 @@ const BookingForm = ({ addBooking }) => {
       <Fade>
         <div className='Booking-form'>
           <Form onSubmit={onSubmit}>
-            <Col sm={10}>
+
+            <Col sm={12}>
               <Form.Group as={Row} controlId='appointmentDate'>
                 <Form.Label column sm={10}>
                   Appointment Date:
@@ -48,7 +49,8 @@ const BookingForm = ({ addBooking }) => {
                 />
               </Form.Group>
             </Col>
-            <Col sm={10}>
+
+            <Col sm={12}>
               <Form.Group as={Row} controlId='appointmentTime'>
                 <Form.Label column sm={3}>
                   Appointment Time:
@@ -62,29 +64,32 @@ const BookingForm = ({ addBooking }) => {
                 />
               </Form.Group>
             </Col>
-            <Col sm={10}>
+
+            <Col sm={12}>
               <Form.Group as={Row} controlId='appointmentDuration'>
                 <Form.Label column sm={3}>
                   Appointment Duration:
                 </Form.Label>
                 <Form.Control
-                  as="select" defaultValue="Choose..."
+                  as="select"
+                  defaultValue="45 minutes"
                   name='appointmentDuration'
                   value={appointmentDuration}
                   onChange={onChange}
                   type='Time'
                   required>
-                  <option>30 min</option>
-                  <option>45 min</option>
-                  <option>1 hr</option>
-                  <option> 1.5 hr</option>
-                  <option>2 hr</option>
+                  <option></option>
+                  <option>30 minutes</option>
+                  <option>45 minutes</option>
+                  <option>1 hour</option>
+                  <option>1 hour 30 minutes</option>
+                  <option>2 hours</option>
                 </Form.Control>
-
 
               </Form.Group>
             </Col>
-            <Col sm={10}>
+
+            <Col sm={12}>
               <Form.Group as={Row} controlId='text'>
                 <Form.Label column sm={2}>
                   Comment:
@@ -100,19 +105,19 @@ const BookingForm = ({ addBooking }) => {
               </Form.Group>
             </Col>
 
-            <Button name='submit' variant='dark' type='submit' value='Submit'>
+            <Button id="appointment-button1" name='submit' variant='dark' type='submit' value='Submit'>
               Submit
             </Button>
 
           </Form>
-          
+
         </div>
-    </Fade>
-    
+      </Fade>
+
     </>
-    
+
   );
-  
+
 };
 
 BookingForm.propTypes = {

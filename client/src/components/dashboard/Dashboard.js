@@ -8,6 +8,8 @@ import Bookings from '../bookings/Bookings';
 import Fade from 'react-reveal/Fade';
 import Button from 'react-bootstrap/Button';
 import Moment from 'react-moment';
+import Time from 'react-time-format'
+import 'moment-timezone';
 
 const Dashboard = ({
   getCurrentProfile,
@@ -63,7 +65,7 @@ const Dashboard = ({
                         <i className='profdash' />Phone Number: <span className="dbInfo">{profile && profile.phone}</span>
                       </p>
                       <p>
-                        <i className='profdash' />Date Of Birth: <span className="dbInfo">{profile && <Moment format="MM/DD/YYYY">{profile.dob}</Moment>}</span>
+                        <i className='profdash' />Date Of Birth: <span className="dbInfo">{profile && <Moment format="MMM-D-YYYY">{profile.dob}</Moment>}</span>
                       </p>
                       <p>
                         <i className='profdash' />Address: <span className="dbInfo">{profile && profile.address1} {profile && profile.address2}</span>
@@ -78,7 +80,7 @@ const Dashboard = ({
                         <i className='profdash' />Zip Code: <span className="dbInfo">{profile && profile.zip}</span>
                       </p>
 
-                      <Link to='/edit-profile'><Button variant='success dash-button '><i className='fas fa-user-circle text-primary' /> Edit Profile</Button></Link>
+                      <Link to='/edit-profile'><Button variant='success' className="dash-button"><i className='fas fa-user-circle text-primary' /> Edit Profile</Button></Link>
                     </div>
 
                   </Fragment>
