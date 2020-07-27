@@ -9,41 +9,62 @@ import 'moment-timezone';
 const BookingItem = ({
   deleteBooking,
   auth,
-  booking: { booking, _id, text, appointmentDate, appointmentTime, appointmentDuration, user },
+  booking: {
+    _id,
+    text,
+    appointmentDate,
+    appointmentTime,
+    appointmentDuration,
+    user,
+  },
   showActions,
 }) => (
+  <>
+    {showActions && (
+      <Fragment>
+        {!auth.loading && user === auth.user._id && (
+          <>
+            <p>
+              <i className='profdash' />
+              Appointment Date:{' '}
+              <span className='dbInfo'>
+                <Moment format='MMM-D-YYYY'>{appointmentDate}</Moment>
+              </span>
+            </p>
 
-    <>
-      {showActions && (
-        <Fragment>
-          {!auth.loading && user === auth.user._id && (
-            <>
-              <p>
-                <i className='profdash' />Appointment Date: <span className="dbInfo"><Moment format="MMM-D-YYYY">{appointmentDate}</Moment></span>
-              </p>
+            <p>
+              <i className='profdash' />
+              Appointment Time:{' '}
+              <span className='dbInfo'>{appointmentTime}</span>
+            </p>
 
-              <p>
-                <i className='profdash' />Appointment Time: <span className="dbInfo">{appointmentTime}</span>
-              </p>
+            <p>
+              <i className='profdash' />
+              Appointment Duration:{' '}
+              <span className='dbInfo'>{appointmentDuration}</span>
+            </p>
 
-              <p>
-                <i className='profdash' />Appointment Duration: <span className="dbInfo">{appointmentDuration}</span>
-              </p>
+            <p>
+              <i className='profdash' />
+              Comment: <span className='dbInfo'>{text}</span>
+            </p>
 
-              <p>
-                <i className='profdash' />Comment: <span className="dbInfo">{text}</span>
-              </p>
-
-              <Button variant='outline-danger' id="dash-button2" onClick={() => deleteBooking(_id)}><i className='fas fa-trash' /> Delete Booking </Button>
-            </>
-          )}
-        </Fragment>
-      )}
-    </>
-  );
+            <Button
+              variant='outline-danger'
+              id='dash-button2'
+              onClick={() => deleteBooking(_id)}
+            >
+              <i className='fas fa-trash' /> Delete Booking{' '}
+            </Button>
+          </>
+        )}
+      </Fragment>
+    )}
+  </>
+);
 
 BookingItem.defaultProps = {
-  showActions: true
+  showActions: true,
 };
 
 BookingItem.propTypes = {
@@ -52,7 +73,6 @@ BookingItem.propTypes = {
   deleteBooking: PropTypes.func.isRequired,
   showActions: PropTypes.bool,
 };
-
 
 const mapStateToProps = (state) => ({
   auth: state.auth,
