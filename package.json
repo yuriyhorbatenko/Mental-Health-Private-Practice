@@ -22,7 +22,7 @@
     "react-time-format": "0.0.5"
   },
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "bcryptjs": "^2.4.3",
     "bootstrap": "^4.5.0",
     "config": "^3.3.1",
