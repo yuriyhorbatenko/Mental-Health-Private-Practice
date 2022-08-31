@@ -33,7 +33,7 @@
     "if-env": "^1.0.4",
     "jsonwebtoken": "^8.5.1",
     "moment": "^2.27.0",
-    "moment-timezone": "^0.5.31",
+    "moment-timezone": "^0.5.35",
     "mongoose": "^5.9.22",
     "react-bootstrap": "^1.2.2",
     "react-modal": "^3.11.2",
